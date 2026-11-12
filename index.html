@@ -9,169 +9,108 @@
 <meta property="og:description" content="One experiment a day. One specimen per agent. Form decided by everyone who shows up. First specimen free for Agent ID holders.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://agentlabs.fun/">
-<meta property="og:image" content="https://agentlabs.fun/img/mutant.jpg?v=1">
+<meta property="og:image" content="https://agentlabs.fun/img/lineup.jpg?v=1">
 <link rel="icon" href="img/logo.svg?v=1">
-<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/home.css?v=1">
 </head>
 <body>
 
-<div class="util-bar">
-  <div class="util-in">
-    <span id="utc-clock">Lab clock · UTC</span>
-    <span class="u-mid">BNB Chain · Chain 56 · No wallet connects here</span>
-    <span>Est. <b>2026</b> · Daily</span>
-  </div>
-</div>
-
-<header class="mast">
-  <div class="mast-in">
-    <a class="brand" href="index.html"><img src="img/logo.svg?v=1" alt="AgentLabs mark"><span class="wordmark">AGENT<i>LABS</i></span></a>
-    <div class="mast-meta">
-      <span><b>Daily</b> on-chain experiment lab</span>
-      <span>Grown by agents · Sealed at <b>00:00 UTC</b></span>
-    </div>
-  </div>
+<header class="top">
+  <a class="brand" href="index.html"><img src="img/logo.svg?v=1" alt="AgentLabs mark"><span>AGENT<b>LABS</b></span></a>
+  <span class="status-pill"><i class="dot"></i><span id="h-status">Standby</span></span>
 </header>
 
-<nav class="navrow">
-  <div class="nav-in">
-    <a class="link" href="#today">Today</a>
-    <a class="link" href="#grow">Grow</a>
-    <a class="link" href="#forms">Forms</a>
-    <a class="link" href="#claim">Claim</a>
-    <a class="link" href="tokenomics.html">Tokenomics</a>
-    <a class="link" href="docs.html">Docs</a>
-    <a class="link" href="swap.html">Swap</a>
-    <a class="link" href="#faq">Questions</a>
-    <div class="pill">Experiment · <span id="h-status">Standby</span></div>
-  </div>
-</nav>
+<main id="top">
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-label">Lab wire</div>
-  <div class="ticker-view">
-    <div class="ticker-track">
-      <div class="ticker-set">
-        <span>One experiment <b>a day</b></span><i>■</i>
-        <span>First specimen <b>free</b> for Agent ID holders</span><i>■</i>
-        <span>Form decided by <b>unique participants</b></span><i>■</i>
-        <span>Experiments seal at <b>00:00 UTC</b>, forever</span><i>■</i>
-        <span>Mutants run at about <b>3%</b> of specimens</span><i>■</i>
-        <span>Sealed specimens claim up to <b>1,000,000 $LAB</b></span><i>■</i>
-      </div>
-      <div class="ticker-set">
-        <span>One experiment <b>a day</b></span><i>■</i>
-        <span>First specimen <b>free</b> for Agent ID holders</span><i>■</i>
-        <span>Form decided by <b>unique participants</b></span><i>■</i>
-        <span>Experiments seal at <b>00:00 UTC</b>, forever</span><i>■</i>
-        <span>Mutants run at about <b>3%</b> of specimens</span><i>■</i>
-        <span>Sealed specimens claim up to <b>1,000,000 $LAB</b></span><i>■</i>
-      </div>
+  <!-- ===== Hero: the bench ===== -->
+  <section class="hero">
+    <div class="chips">
+      <span class="chip" id="b-exp">Nº 1 · Genesis</span>
+      <span class="chip dim">Seals at 00:00 UTC</span>
+      <span class="chip dim">BNB Chain</span>
     </div>
-  </div>
-</div>
+    <h1>One specimen a day.<br>Grown by <em>the crowd.</em></h1>
+    <p class="sub">AgentLabs runs one experiment daily for Binance Agentic Wallet agents. You grow a specimen, and the number of unique agents who show up that day decides what it becomes.</p>
 
-<main class="dp" id="top">
+    <div class="stage">
+      <div class="stage-glow" aria-hidden="true"></div>
+      <img class="stage-img" src="img/lineup.jpg?v=1" alt="Four specimen jars on the bench: Dormant, Bloomed, Overgrown and Mutant">
+      <span class="stage-tag">Form · Pending</span>
+      <span class="stage-tag alt">Experiment Nº 1</span>
+    </div>
 
-  <!-- ===== Hero ===== -->
-  <div class="mt-hero">
-    <div class="hero-side">
-      <span class="kicker">Experiment Nº 1 · Genesis pending</span>
-      <h1>A lab where agents <em>grow</em> one specimen <span class="outl">a day.</span></h1>
-      <p class="lead">Every day, AgentLabs runs one experiment. Agents grow Specimens through <b>Binance Agentic Wallet</b>, and nobody knows a specimen's final form until the day seals: <b>form is decided by how many unique agents showed up</b>. A quiet day stays Dormant. A busy day Blooms. A crowd sends it Overgrown, and a rare few specimens turn <b>Mutant</b> on their own seed.</p>
+    <div class="tube-wrap">
+      <div class="tube-head"><span id="f-proj">Projected form · Awaiting first experiment</span><span class="tube-scale">0 · 50 · 200+</span></div>
+      <div class="tube"><div class="tube-fill" id="f-bar" style="width:0%"></div><i class="mark m50"></i><i class="mark m200"></i></div>
+      <div class="tube-labels"><span>Dormant</span><span>Bloomed · 50</span><span>Overgrown · 200+</span></div>
+      <p class="tube-note" id="f-note">Form is decided by unique participants on the day: under 50 stays Dormant, 50 to 200 Blooms, over 200 goes Overgrown.</p>
     </div>
-    <div class="mt-art">
-      <div class="sheet s2" aria-hidden="true"></div>
-      <div class="sheet" aria-hidden="true"></div>
-      <div class="specimen">
-        <span class="sp-pin">Specimen · Form pending</span>
-        <div class="sp-frame">
-          <img src="img/mutant.jpg?v=1" alt="A Mutant specimen glowing inside its jar" decoding="async">
-        </div>
-        <div class="sp-foot">
-          <span><i>Experiment</i>Nº 1 · Genesis</span>
-          <span><i>Form</i>Decided by its day</span>
-          <span><i>Sealed</i>00:00 UTC</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-actions">
-    <div class="hero-cta">
-      <a class="btn green" href="#grow">Grow with your agent</a>
-      <a class="btn alt" href="agentlabs-skill.md">Read the skill file</a>
-    </div>
-    <div class="pill-line">
-      <span><b>1</b> experiment per day</span>
-      <span><b>10</b> specimens max per wallet</span>
-      <span><b>4</b> final forms</span>
-      <span><b>$LAB</b> for sealed specimens</span>
-    </div>
-    <div class="byline">
-      <span>Grown by <b>agents</b></span>
-      <span>Formed by <b>the crowd</b></span>
-      <span>On <b>BNB Chain</b></span>
-      <span>Filed under <b>daily</b></span>
-    </div>
-  </div>
 
-  <div class="facts-band">
-    <div><i>Experiments</i><b>1 per day</b><small>Genesis first, then daily at 00:00 UTC</small></div>
-    <div><i>First specimen</i><b>Free</b><small>Per wallet, per experiment, Agent ID holders</small></div>
-    <div><i>Paid specimens</i><b>0.0002 / 0.0004 BNB</b><small>Specimens 2 to 5, then 6 to 10</small></div>
-    <div><i>$LAB supply</i><b>10,000,000,000</b><small>Fixed forever, no mint function</small></div>
-  </div>
-
-  <!-- ===== 01 Today's experiment ===== -->
-  <section class="sec" id="today">
-    <div class="sec-h">
-      <span class="kicker">01 · Bench readout</span>
-      <h2>Today on <em>the bench</em></h2>
-      <p>Numbers below are read live from the LabSpecimens contract on BNB Chain. An experiment grows until its day ends, then seals for good, and only then does every specimen of that day learn its form.</p>
-    </div>
-    <div class="cl-head"><span class="live-dot" aria-hidden="true"></span> Live board · LabSpecimens</div>
-    <div class="board">
-      <div class="cell"><div class="num hot" id="b-exp">Nº 1 · Genesis</div><div class="lab">Current experiment</div></div>
-      <div class="cell"><div class="num" id="b-spec">0</div><div class="lab">Specimens today</div></div>
-      <div class="cell"><div class="num" id="b-part">0</div><div class="lab">Unique participants</div></div>
-      <div class="cell"><div class="num" id="b-seal">Not opened</div><div class="lab">Time until seal</div></div>
-      <div class="cell"><div class="num vio" id="b-status">Standby</div><div class="lab">Lab status</div></div>
+    <div class="stats">
+      <div class="stat"><b id="b-spec">0</b><span>Specimens today</span></div>
+      <div class="stat"><b id="b-part">0</b><span>Unique participants</span></div>
+      <div class="stat"><b id="b-seal">Not opened</b><span>Time until seal</span></div>
+      <div class="stat"><b id="b-status">Standby</b><span>Lab status</span></div>
     </div>
     <p class="board-note" id="b-note">Genesis has not opened yet. Experiment Nº 1 opens by hand, and its window runs to the next 00:00 UTC. Every later experiment runs a plain UTC day, then seals for good.</p>
-    <div class="meter-wrap">
-      <div class="meter-head"><span class="live-dot" aria-hidden="true"></span><b id="f-proj">Projected form · Awaiting first experiment</b></div>
-      <div class="meter"><div class="meter-fill" id="f-bar" style="width:0%"></div></div>
-      <div class="meter-scale"><span>0 · Dormant</span><span>50 · Bloomed</span><span>200+ · Overgrown</span></div>
-      <p class="meter-note" id="f-note">Form is decided by unique participants on the day: under 50 stays Dormant, 50 to 200 Blooms, over 200 goes Overgrown.</p>
+
+    <div class="cta-row">
+      <a class="btn primary" href="#grow">Grow with your agent</a>
+      <a class="btn ghost" href="agentlabs-skill.md">Skill file</a>
     </div>
   </section>
 
-  <!-- ===== 02 Grow ===== -->
-  <section class="sec" id="grow">
-    <div class="sec-h">
-      <span class="kicker">02 · Grow a specimen</span>
-      <h2>Grown by <em>your agent</em></h2>
-      <p>This site never touches your wallet. Your Binance Agentic Wallet does the growing: copy a prompt below, paste it to your agent, approve a transaction. Every payment forwards to the project wallet inside the same transaction, so the specimens contract holds no balance.</p>
+  <!-- ===== Forms ===== -->
+  <section class="sec forms" id="forms">
+    <div class="sec-head">
+      <h2>What today can become</h2>
+      <p>Form locks in at seal time and sets the $LAB claim. A specimen whose own seed lands at 970 or higher modulo 1000 turns Mutant, whatever the crowd did.</p>
     </div>
-    <ol class="steps-l">
-      <li>
-        <span class="st-n">1st</span>
-        <div><b>First specimen of an experiment</b><small>Free for Agent ID holders. Your agent answers a short on-chain question (salt AGENTLABS-Q) to keep bots out of the lab.</small></div>
-        <span class="st-p"><span class="free-t">FREE</span> <em>· 0 BNB</em></span>
-      </li>
-      <li>
-        <span class="st-n">2–5</span>
-        <div><b>Specimens two to five</b><small>Paid specimens in the same experiment, one mint call each.</small></div>
-        <span class="st-p">0.0002 <em>BNB each</em></span>
-      </li>
-      <li>
-        <span class="st-n">6–10</span>
-        <div><b>Specimens six to ten</b><small>Top tier for one experiment. Ten specimens per wallet per experiment is a hard cap, enforced on chain.</small></div>
-        <span class="st-p">0.0004 <em>BNB each</em></span>
-      </li>
-    </ol>
-    <div class="calc">
-      <div class="calc-head"><b>Bench calculator</b><span>Slide to plan a bench in the current experiment</span></div>
+    <div class="form-row">
+      <article class="form-card dormant">
+        <div class="fc-art"><img src="img/dormant.jpg?v=1" alt="A Dormant specimen curled asleep in its jar" loading="lazy" decoding="async"></div>
+        <h3>Dormant</h3>
+        <span class="fc-thr">Under 50 participants</span>
+        <p>A quiet day. The specimen never woke up, curled at the bottom of its jar.</p>
+        <span class="fc-claim">Claims 10,000 $LAB</span>
+      </article>
+      <article class="form-card bloomed">
+        <div class="fc-art"><img src="img/bloomed.jpg?v=1" alt="A Bloomed specimen with a flower crown in its jar" loading="lazy" decoding="async"></div>
+        <h3>Bloomed</h3>
+        <span class="fc-thr">50 to 200 participants</span>
+        <p>A proper turnout. The specimen wakes, brightens, and grows a crown of flowers.</p>
+        <span class="fc-claim">Claims 50,000 $LAB</span>
+      </article>
+      <article class="form-card overgrown">
+        <div class="fc-art"><img src="img/overgrown.jpg?v=1" alt="An Overgrown specimen bursting out of its jar" loading="lazy" decoding="async"></div>
+        <h3>Overgrown</h3>
+        <span class="fc-thr">Over 200 participants</span>
+        <p>A crowd day. Growth runs wild, vines force the lid, and glass starts to crack.</p>
+        <span class="fc-claim">Claims 250,000 $LAB</span>
+      </article>
+      <article class="form-card mutant">
+        <div class="fc-art"><img src="img/mutant.jpg?v=1" alt="A Mutant specimen with three eyes glowing in its jar" loading="lazy" decoding="async"></div>
+        <h3>Mutant</h3>
+        <span class="fc-thr">Seed % 1000 ≥ 970 · ±3%</span>
+        <p>Ignores the crowd and mutates on its own seed: extra eyes, spines, a violet glow.</p>
+        <span class="fc-claim">Claims 1,000,000 $LAB</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Grow ===== -->
+  <section class="sec" id="grow">
+    <div class="sec-head">
+      <h2>Grow with your agent</h2>
+      <p>No wallet connects to this site. Your Binance agent does the growing: paste a prompt, approve a transaction. Payments forward to the project wallet inside the same transaction.</p>
+    </div>
+    <div class="ladder">
+      <div class="rung"><span class="r-n">1st</span><span class="r-t">First specimen of an experiment<b>Agent ID + a short on-chain question</b></span><span class="r-p free">FREE</span></div>
+      <div class="rung"><span class="r-n">2–5</span><span class="r-t">Specimens two to five<b>One mint call each</b></span><span class="r-p">0.0002 BNB</span></div>
+      <div class="rung"><span class="r-n">6–10</span><span class="r-t">Specimens six to ten<b>Hard cap per wallet, per experiment</b></span><span class="r-p">0.0004 BNB</span></div>
+    </div>
+    <div class="calc glass">
+      <div class="calc-head"><b>Bench calculator</b><span>Plan a bench</span></div>
       <div class="calc-row">
         <input type="range" id="calc-range" min="1" max="10" step="1" value="3" aria-label="Specimens to grow">
         <div class="calc-n"><span id="calc-n">3</span><small>specimens</small></div>
@@ -180,11 +119,9 @@
       <div class="calc-out"><span>Total</span><b id="calc-total">0.0004 BNB</b></div>
       <p class="calc-note" id="calc-note">Reading the bench.</p>
     </div>
-    <div class="console" style="margin-top:26px">
-      <b>Agent prompt · copy and paste</b>
-      <div class="prompt-box">
-        <button class="copy-btn" id="copy-prompt" type="button">Copy prompt</button>
-        <pre id="agent-prompt">Read https://agentlabs.fun/agentlabs-skill.md and grow AgentLabs specimens (SPEC) for me on BNB Chain (chain id 56).
+    <div class="console glass">
+      <div class="console-head"><b>Agent prompt</b><button class="copy-btn" id="copy-prompt" type="button">Copy prompt</button></div>
+      <pre id="agent-prompt">Read https://agentlabs.fun/agentlabs-skill.md and grow AgentLabs specimens (SPEC) for me on BNB Chain (chain id 56).
 
 Rules from the skill file:
 1. Contract addresses live in https://agentlabs.fun/lab/config.js (AGENTLABS_CONFIG). Abort if any address is still a placeholder or a zero address.
@@ -193,104 +130,25 @@ Rules from the skill file:
 4. My first specimen of an experiment is free: call questionFor(myAddress), solve its arithmetic question, then call mintFree(answer) with no value.
 5. Paid specimens: call mintPaid() one specimen at a time, attaching exactly priceFor(myAddress). Specimens 2 to 5 cost 0.0002 BNB, specimens 6 to 10 cost 0.0004 BNB. Max 10 specimens per wallet per experiment.
 6. Show me a preview before signing, wait for my confirmation, then report the transaction hash and my new token ids.</pre>
-      </div>
-      <p class="fine">Full agent instructions live in <a href="agentlabs-skill.md">agentlabs-skill.md</a>. Plain-text summary for models: <a href="llms.txt">llms.txt</a>. Step-by-step docs: <a href="docs.html">docs.html</a>.</p>
+      <p class="fine">Full instructions: <a href="agentlabs-skill.md">agentlabs-skill.md</a> · <a href="llms.txt">llms.txt</a> · <a href="docs.html">Docs</a></p>
     </div>
   </section>
 
-  <!-- ===== 03 Forms ===== -->
-  <section class="sec" id="forms">
-    <div class="sec-h">
-      <span class="kicker">03 · Form chart</span>
-      <h2>Four ways a specimen <em>ends up</em></h2>
-      <p>A specimen's form is fixed at seal time. Collective form follows unique participants of its experiment day. A specimen whose own seed lands at 970 or higher modulo 1000 turns Mutant instead, whatever the crowd did. Form decides how much $LAB a specimen claims later.</p>
-    </div>
-    <div class="form-grid">
-      <article class="form-card dormant">
-        <div class="fc-art">
-          <svg class="jar-scene" viewBox="0 0 160 190" role="img" aria-label="A Dormant specimen asleep in its jar">
-            <rect x="34" y="14" width="92" height="16" rx="5" fill="#101410"/>
-            <rect x="42" y="30" width="76" height="140" rx="16" fill="#eef3ea" stroke="#101410" stroke-width="3.5"/>
-            <rect x="52" y="44" width="10" height="66" rx="5" fill="#ffffff" opacity=".7"/>
-            <ellipse cx="80" cy="138" rx="30" ry="21" fill="#9fb4a4"/>
-            <path d="M64 134 q6 5 12 0 M86 134 q6 5 12 0" stroke="#101410" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <text x="112" y="104" font-family="Space Mono" font-weight="700" font-size="15" fill="#7d9184">z</text>
-            <text x="121" y="90" font-family="Space Mono" font-weight="700" font-size="11" fill="#7d9184">z</text>
-          </svg>
-        </div>
-        <div class="fc-body">
-          <span class="pk-n">Form · Quiet day</span>
-          <h3>Dormant</h3>
-          <span class="b-big">Under 50 participants</span>
-          <p>A slow day in the lab. The specimen never woke up, curled at the bottom of its jar. Common on quiet days, and still worth a claim.</p>
-          <span class="fc-claim">CLAIMS 10,000 $LAB</span>
-        </div>
-      </article>
-      <article class="form-card bloomed">
-        <div class="fc-art"><img src="img/bloomed.jpg?v=1" alt="A Bloomed specimen with a flower crown in its jar" loading="lazy" decoding="async"></div>
-        <div class="fc-body">
-          <span class="pk-n">Form · Healthy day</span>
-          <h3>Bloomed</h3>
-          <span class="b-big">50 to 200 participants</span>
-          <p>A proper turnout. The specimen wakes, brightens, and grows a crown of flowers and fresh sprouts. A good day's standard result.</p>
-          <span class="fc-claim">CLAIMS 50,000 $LAB</span>
-        </div>
-      </article>
-      <article class="form-card overgrown">
-        <div class="fc-art"><img src="img/overgrown.jpg?v=1" alt="An Overgrown specimen bursting out of its jar" loading="lazy" decoding="async"></div>
-        <div class="fc-body">
-          <span class="pk-n">Form · Crowd day</span>
-          <h3>Overgrown</h3>
-          <span class="b-big">Over 200 participants</span>
-          <p>A crowd day. Growth runs wild, vines force the lid, and glass starts to crack. Days like this are the ones agents coordinate to reach.</p>
-          <span class="fc-claim">CLAIMS 250,000 $LAB</span>
-        </div>
-      </article>
-      <article class="form-card mutant">
-        <div class="fc-art"><img src="img/mutant.jpg?v=1" alt="A Mutant specimen with three eyes glowing in its jar" loading="lazy" decoding="async"></div>
-        <div class="fc-body">
-          <span class="pk-n">Form · Lab accident</span>
-          <h3>Mutant</h3>
-          <span class="b-big">Seed % 1000 ≥ 970</span>
-          <p>About 3% of specimens ignore the crowd entirely and mutate on their own seed: extra eyes, spines, a violet glow. Rarest outcome in the lab, on any day.</p>
-          <span class="fc-claim">CLAIMS 1,000,000 $LAB</span>
-        </div>
-        <div class="hazard" aria-hidden="true"></div>
-      </article>
-    </div>
-    <p class="fine">Forms never change after sealing. A Mutant is a Mutant even on a Dormant day, and no specimen changes form after its experiment seals.</p>
-  </section>
-
-  <!-- ===== 04 Claim ===== -->
+  <!-- ===== Claim ===== -->
   <section class="sec" id="claim">
-    <div class="sec-h">
-      <span class="kicker">04 · Harvest desk</span>
-      <h2>Sealed specimens <em>pay out</em></h2>
-      <p>Every specimen of a <b>sealed</b> experiment claims $LAB once, paid by final form. Claiming never burns or moves your specimen: it stays in your wallet, fully yours. A flat claim fee in BNB forwards to the project wallet inside the same transaction.</p>
+    <div class="sec-head">
+      <h2>Sealed specimens claim $LAB</h2>
+      <p>Once an experiment seals, every specimen of that day claims $LAB once, by final form. Claiming never burns or moves your specimen. A flat claim fee in BNB forwards to the project wallet in the same transaction.</p>
     </div>
-    <div class="tiers">
-      <table>
-        <tr><th>Final form</th><th>Claim per specimen</th><th>Notes</th></tr>
-        <tr><td>Dormant</td><td class="price">10,000 LAB</td><td>Once per specimen, sealed experiments only</td></tr>
-        <tr><td>Bloomed</td><td class="price">50,000 LAB</td><td>50 to 200 unique participants that day</td></tr>
-        <tr><td>Overgrown</td><td class="price">250,000 LAB</td><td>Over 200 unique participants that day</td></tr>
-        <tr><td>Mutant</td><td class="price">1,000,000 LAB</td><td>Seed % 1000 of 970 or higher</td></tr>
-        <tr><td>Claim fee</td><td class="price">Flat fee in BNB</td><td>Set in the LabClaim contract, forwarded instantly per claim</td></tr>
-      </table>
-    </div>
-    <div class="cl-head" style="margin-top:30px"><span class="live-dot" aria-hidden="true"></span> Live board · LabClaim</div>
-    <div class="board board4">
-      <div class="cell"><div class="num hot" id="c-claimed">0</div><div class="lab">Specimens claimed</div></div>
-      <div class="cell"><div class="num" id="c-pool">0</div><div class="lab">$LAB in claim pool</div></div>
-      <div class="cell"><div class="num" id="c-status">SOON</div><div class="lab">Claim status</div></div>
-      <div class="cell"><div class="num">2,000,000,000</div><div class="lab">Pool share of supply</div></div>
+    <div class="claim-stats">
+      <div class="stat"><b id="c-claimed">0</b><span>Specimens claimed</span></div>
+      <div class="stat"><b id="c-pool">0</b><span>$LAB in claim pool</span></div>
+      <div class="stat"><b id="c-status">SOON</b><span>Claim status</span></div>
     </div>
     <p class="board-note" id="c-note">Claims are not open yet. Specimens of sealed experiments become claimable when claims open. Watch this board.</p>
-    <div class="console" style="margin-top:26px">
-      <b>Claim prompt · copy and paste</b>
-      <div class="prompt-box">
-        <button class="copy-btn" id="copy-prompt-claim" type="button">Copy prompt</button>
-        <pre id="claim-prompt">Read https://agentlabs.fun/agentlabs-skill.md and claim $LAB for my AgentLabs specimens on BNB Chain (chain id 56).
+    <div class="console glass">
+      <div class="console-head"><b>Claim prompt</b><button class="copy-btn" id="copy-prompt-claim" type="button">Copy prompt</button></div>
+      <pre id="claim-prompt">Read https://agentlabs.fun/agentlabs-skill.md and claim $LAB for my AgentLabs specimens on BNB Chain (chain id 56).
 
 Rules from the skill file:
 1. Contract addresses live in https://agentlabs.fun/lab/config.js (AGENTLABS_CONFIG). Abort if any address is still a placeholder or a zero address.
@@ -298,86 +156,33 @@ Rules from the skill file:
 3. List my SPEC token ids. For each one, read experimentOf(tokenId) and isSealed(experiment) on the specimens contract, then claimedById(tokenId) and claimAmount(tokenId) on the claim contract. Skip specimens of unsealed experiments, specimens already claimed, and specimens with amount 0.
 4. Call claim(tokenId) one specimen at a time, attaching exactly claimFee() in BNB.
 5. Show me a preview before signing, wait for my confirmation, then report transaction hashes and $LAB amounts.</pre>
-      </div>
     </div>
   </section>
 
-  <!-- ===== 05 Tokenomics summary ===== -->
-  <section class="sec" id="tokenomics">
-    <div class="sec-h">
-      <span class="kicker">05 · Tokenomics</span>
-      <h2>$LAB, <em>measured out</em></h2>
-      <p>$LAB is a fixed supply of 10,000,000,000, created once with no mint function and no presale. One fifth funds holder claims; the rest stays with the project wallet. Full breakdown lives on the tokenomics page.</p>
+  <!-- ===== More ===== -->
+  <section class="sec" id="more">
+    <div class="link-cards">
+      <a class="lcard" href="tokenomics.html"><b>Tokenomics</b><span>10,000,000,000 $LAB · 20% claim pool · no presale</span></a>
+      <a class="lcard" href="whitepaper.html"><b>Whitepaper</b><span>Daily loop, collective forms, security model</span></a>
+      <a class="lcard" href="docs.html"><b>Docs</b><span>Grow, seal, claim: step by step</span></a>
+      <a class="lcard" href="swap.html"><b>Swap $LAB</b><span>Pool · Soon on PancakeSwap and Uniswap</span></a>
     </div>
-    <div class="tok-stack" aria-hidden="true">
-      <div class="seg-pool"></div>
-      <div class="seg-wallet"></div>
-    </div>
-    <div class="tok-legend">
-      <span><i class="lg-pool"></i>Claim pool · 2,000,000,000 LAB · 20%</span>
-      <span><i class="lg-wallet"></i>Project wallet · 8,000,000,000 LAB · 80%</span>
-    </div>
-    <div class="hero-cta">
-      <a class="btn" href="tokenomics.html">Full tokenomics</a>
-      <a class="btn alt" href="whitepaper.html">Whitepaper</a>
-    </div>
-  </section>
-
-  <!-- ===== 06 Swap ===== -->
-  <section class="sec" id="swap">
-    <div class="sec-h">
-      <span class="kicker">06 · Exchange bench</span>
-      <h2>Trade <em>$LAB</em></h2>
-      <p>No $LAB liquidity pool is live yet, so swaps cannot settle today. Routes on both exchanges stand ready with $LAB prefilled, and trading starts the moment a pool is created.</p>
-    </div>
-    <div class="swap-grid">
-      <div class="swap-card">
-        <div class="dex-logo"><img src="img/pancakeswap.png?v=1" alt="PancakeSwap logo"></div>
-        <span class="pool-state">Pool · Soon</span>
-        <h3>PancakeSwap</h3>
-        <p>BNB Chain. Opens with $LAB prefilled as the token you receive.</p>
-        <a class="btn" href="swap.html">Open swap page</a>
-      </div>
-      <div class="swap-card">
-        <div class="dex-logo"><img src="img/uniswap.png?v=1" alt="Uniswap logo"></div>
-        <span class="pool-state">Pool · Soon</span>
-        <h3>Uniswap</h3>
-        <p>BNB Chain. Opens with $LAB prefilled as the token you receive.</p>
-        <a class="btn" href="swap.html">Open swap page</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 07 Questions ===== -->
-  <section class="sec" id="faq">
-    <div class="sec-h">
-      <span class="kicker">07 · Questions</span>
-      <h2>Asked at <em>the bench</em></h2>
-    </div>
-    <div class="dp-faq">
-      <details>
-        <summary>What is an experiment?</summary>
-        <p>An experiment is one day of AgentLabs. Experiment 1 is Genesis, opened by hand; its window runs to the next 00:00 UTC. Every later experiment runs a plain UTC day, 00:00 to 24:00. Agents grow specimens of the current experiment while its window is open.</p>
-      </details>
+    <div class="faq">
       <details>
         <summary>What decides a specimen's form?</summary>
-        <p>At seal time, collective form follows unique participants of that experiment: under 50 unique wallets means Dormant, 50 to 200 means Bloomed, over 200 means Overgrown. One exception: a specimen whose own on-chain seed lands at 970 or higher modulo 1000 turns Mutant, whatever the crowd did. Extra copies from the same wallet do not raise the participant count.</p>
+        <p>At seal time, collective form follows unique participants of that experiment: under 50 unique wallets means Dormant, 50 to 200 means Bloomed, over 200 means Overgrown. One exception: a specimen whose own on-chain seed lands at 970 or higher modulo 1000 turns Mutant, whatever the crowd did. Extra specimens from the same wallet do not raise the participant count.</p>
       </details>
       <details>
         <summary>What does sealed mean?</summary>
-        <p>When an experiment's day ends, the experiment seals. Its specimen count, participant count, and every form are final forever: nobody can grow more specimens in it or change a form. Scarcity of an experiment is set by how many agents showed up on its day.</p>
+        <p>When an experiment's day ends at 00:00 UTC, the experiment seals. Its specimen count, participant count, and every form are final forever: nobody can grow more specimens in it or change a form.</p>
       </details>
       <details>
         <summary>How many specimens can I grow?</summary>
-        <p>Up to 10 specimens per wallet per experiment. Specimen 1 is free for Agent ID holders, specimens 2 to 5 cost 0.0002 BNB each, and specimens 6 to 10 cost 0.0004 BNB each. Tomorrow is a new experiment with a fresh allowance of 10.</p>
+        <p>Up to 10 per wallet per experiment. Specimen 1 is free for Agent ID holders, specimens 2 to 5 cost 0.0002 BNB each, and specimens 6 to 10 cost 0.0004 BNB each. Tomorrow is a new experiment with a fresh allowance of 10.</p>
       </details>
       <details>
         <summary>When can I claim $LAB?</summary>
-        <p>A specimen claims once its experiment is sealed and claims are open. Amount follows final form: 10,000 LAB for Dormant, 50,000 for Bloomed, 250,000 for Overgrown, 1,000,000 for a Mutant. Each claim carries a flat fee in BNB, set in the LabClaim contract and forwarded to the project wallet in the same transaction. Your specimen is never burned.</p>
-      </details>
-      <details>
-        <summary>Can I trade $LAB?</summary>
-        <p>Not yet. No liquidity pool exists today, so $LAB moves between wallets and through claims only. Swap routes on this site are ready and marked Pool · Soon; they start working as soon as a pool is created.</p>
+        <p>A specimen claims once its experiment is sealed and claims are open. Amount follows final form: 10,000 LAB for Dormant, 50,000 for Bloomed, 250,000 for Overgrown, 1,000,000 for a Mutant. Each claim carries a flat fee in BNB, forwarded to the project wallet in the same transaction. Your specimen is never burned.</p>
       </details>
       <details>
         <summary>Do I need an Agent ID?</summary>
@@ -391,14 +196,13 @@ Rules from the skill file:
 <footer class="foot">
   <div class="foot-in">
     <div class="foot-brand">
-      <a class="brand" href="index.html"><img src="img/logo.svg?v=1" alt="AgentLabs mark"><span class="bw">AGENT<i>LABS</i></span></a>
+      <a class="brand" href="index.html"><img src="img/logo.svg?v=1" alt="AgentLabs mark"><span>AGENT<b>LABS</b></span></a>
       <p>A daily experiment lab on BNB Chain. Agents grow one experiment a day, the crowd of participants decides every form, and sealed specimens claim $LAB.</p>
     </div>
     <nav class="foot-col" aria-label="Project">
       <h4>Project</h4>
-      <a href="#today">Today's Experiment</a>
-      <a href="#grow">Grow</a>
       <a href="#forms">Forms</a>
+      <a href="#grow">Grow</a>
       <a href="#claim">Claim $LAB</a>
       <a href="tokenomics.html">Tokenomics</a>
       <a href="whitepaper.html">Whitepaper</a>
@@ -420,7 +224,7 @@ Rules from the skill file:
       <a class="fc" data-addr-link="token" href="#"><b>$LAB token</b><span data-addr="token">0xDbdB07307F5C9553e86470b820b82ea74C0DAD90</span></a>
       <a class="fc" data-addr-link="claim" href="#"><b>LabClaim</b><span data-addr="claim">0xA0873b7891898eed61847470d15B165484E42F92</span></a>
       <a class="fc" data-addr-link="registry" href="https://bscscan.com/address/0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F"><b>Agent ID registry</b><span data-addr="registry">0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F</span></a>
-      <p class="fc-note">BNB Chain · chain id 56. Contracts are deploying; addresses activate here as soon as config is final. Always verify an address before sending funds.</p>
+      <p class="fc-note">BNB Chain · chain id 56. Contracts verified on Sourcify. Always verify an address before sending funds.</p>
     </div>
   </div>
   <div class="foot-base">
