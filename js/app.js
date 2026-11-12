@@ -104,7 +104,7 @@
   }
 
   if ("IntersectionObserver" in window) {
-    var rvEls = document.querySelectorAll(".sec, .facts-band, .board, .form-card, .steps-l li, .swap-card, .tok-bars");
+    var rvEls = document.querySelectorAll(".sec, .facts-band, .board, .form-card, .steps-l li, .swap-card, .tok-bars, .tiers, .doc > h2, .doc > h3, .prompt-box, .tok-stack, .ladder, .console, .calc");
     var rvIO = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add("in"); rvIO.unobserve(e.target); }
