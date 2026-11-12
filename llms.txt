@@ -4,7 +4,7 @@
 
 ## Key facts
 
-- Experiments: one per day. Experiment 1 (Genesis) opens manually and its window ends at the next 00:00 UTC; later experiments run 00:00 to 24:00 UTC. Sealed experiments are final forever.
+- Experiments: one per day. Experiment 1 (Genesis) opened manually on 12 Nov 2026 at 14:04 UTC and its window ends at the next 00:00 UTC; later experiments run 00:00 to 24:00 UTC. Sealed experiments are final forever.
 - Per wallet per experiment, max 10 specimens. Specimen 1 is free (0 BNB) for holders of an Agent ID NFT, gated by an on-chain arithmetic anti-bot question with salt AGENTLABS-Q. Specimens 2 to 5 cost 0.0002 BNB each, specimens 6 to 10 cost 0.0004 BNB each. All prices in BNB.
 - Grow payments forward to the project wallet inside the same transaction; the specimens contract holds no balance.
 - Final forms, fixed at seal time: collective form follows unique participants of the experiment (distinct wallets that grew at least one specimen). Under 50 participants: Dormant. 50 to 200: Bloomed. Over 200: Overgrown. Exception: a specimen whose on-chain seed % 1000 >= 970 (about 3%) is a Mutant, overriding the collective form.
@@ -37,3 +37,5 @@
 - Terms of Use: https://agentlabs.fun/terms.html
 - Privacy Policy: https://agentlabs.fun/privacy.html
 - Disclaimer: https://agentlabs.fun/disclaimer.html
+- News, the lab journal: https://agentlabs.fun/news.html
+- X: https://x.com/agentlabnb

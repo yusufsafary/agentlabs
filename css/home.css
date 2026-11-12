@@ -499,3 +499,12 @@ h1 .grad {
 @media (prefers-reduced-motion: reduce) {
   .stage-frame::before, .tube::after, .tube-fill::before, .btn.primary, .form-card.mutant::after { animation: none; }
 }
+
+/* ---------- top right group + X link ---------- */
+.top-r { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.x-link {
+  font-family: "Space Mono", monospace; font-size: 10px; letter-spacing: 0.03em;
+  color: var(--acid); border: 1px solid var(--line); background: var(--glass);
+  padding: 7px 11px; border-radius: 999px; text-transform: uppercase; white-space: nowrap;
+  text-decoration: none;
+}
