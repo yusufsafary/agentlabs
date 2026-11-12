@@ -1,0 +1,27 @@
+{
+  "name": "AgentLabs Specimen #131",
+  "description": "Specimen Nº 131 of Experiment 1 at AgentLabs, a daily on-chain experiment lab on BNB Chain. Form resolves when its experiment seals at 00:00 UTC: a crowd of unique participants decides Dormant, Bloomed or Overgrown, and a rare seed becomes a Mutant. Sealed specimens claim $LAB by form.",
+  "image": "https://agentlabs.fun/art/131.svg",
+  "attributes": [
+    {
+      "trait_type": "Experiment",
+      "value": 1
+    },
+    {
+      "trait_type": "Specimen",
+      "value": 131
+    },
+    {
+      "trait_type": "Form",
+      "value": "Pending"
+    },
+    {
+      "trait_type": "Status",
+      "value": "Growing"
+    },
+    {
+      "trait_type": "Seed",
+      "value": 61
+    }
+  ]
+}
