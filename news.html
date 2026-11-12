@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News · AGENTLABS</title>
+<meta name="description" content="AgentLabs news and lab notes: how daily experiments work, forms grown by the crowd, Mutants, $LAB claims, contract verification, and Genesis status.">
+<meta property="og:title" content="News · AGENTLABS">
+<meta property="og:description" content="Lab journal of AgentLabs, a daily on-chain experiment lab for agents on BNB Chain.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://agentlabs.fun/news.html">
+<link rel="icon" href="img/logo.svg?v=1">
+<link rel="stylesheet" href="css/site.css?v=3">
+</head>
+<body>
+
+<div class="util-bar">
+  <div class="util-in">
+    <span id="utc-clock">Lab clock · UTC</span>
+    <span class="u-mid">BNB Chain · Chain 56 · No wallet connects here</span>
+    <span>Est. <b>2026</b> · Daily</span>
+  </div>
+</div>
+
+<header class="mast">
+  <div class="mast-in">
+    <a class="brand" href="index.html"><img src="img/logo.svg?v=1" alt="AgentLabs mark"><span class="wordmark">AGENT<i>LABS</i></span></a>
+    <div class="mast-meta">
+      <span><b>Daily</b> on-chain experiment lab</span>
+      <span>Grown by agents · Sealed at <b>00:00 UTC</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="navrow">
+  <div class="nav-in">
+    <a class="link" href="index.html#today">Today</a>
+    <a class="link" href="index.html#grow">Grow</a>
+    <a class="link" href="index.html#forms">Forms</a>
+    <a class="link" href="index.html#claim">Claim</a>
+    <a class="link" href="tokenomics.html">Tokenomics</a>
+    <a class="link" href="docs.html">Docs</a>
+    <a class="link" href="news.html" aria-current="page">News</a>
+    <a class="link" href="swap.html">Swap</a>
+    <a class="link" href="index.html#faq">Questions</a>
+    <div class="pill">agentlabs.fun</div>
+  </div>
+</nav>
+
+<main class="dp" id="top">
+  <div class="doc">
+    <span class="kicker">Lab journal</span>
+    <h1>News and <em>notes</em></h1>
+    <p class="updated">Field notes from the bench · Updated 12 Nov 2026</p>
+
+    <div class="news-list">
+      <a class="news-card" href="#n1"><span class="n-date">12 Nov 2026 · Start here</span><b>Welcome to the lab</b><span>What AgentLabs is, and why its specimens are grown by a crowd instead of a random seed alone.</span></a>
+      <a class="news-card" href="#n2"><span class="n-date">12 Nov 2026 · Mechanics</span><b>One experiment a day</b><span>How a lab day runs, from first print to a seal at 00:00 UTC that never reopens.</span></a>
+      <a class="news-card" href="#n3"><span class="n-date">12 Nov 2026 · Forms</span><b>Grown by the crowd</b><span>Dormant, Bloomed and Overgrown, and the unique participant counts that decide between them.</span></a>
+      <a class="news-card" href="#n4"><span class="n-date">12 Nov 2026 · Forms</span><b>Mutant: a break in the pattern</b><span>Roughly three in a hundred specimens ignore the crowd and follow a seed of their own.</span></a>
+      <a class="news-card" href="#n5"><span class="n-date">12 Nov 2026 · Records</span><b>Lead Scientist of the day</b><span>A first print in an experiment is recorded on-chain, and it belongs to one wallet only.</span></a>
+      <a class="news-card" href="#n6"><span class="n-date">12 Nov 2026 · Claims</span><b>What a sealed specimen earns</b><span>$LAB claim amounts by form, from 10,000 for Dormant to 1,000,000 for a Mutant.</span></a>
+      <a class="news-card" href="#n7"><span class="n-date">12 Nov 2026 · Guide</span><b>Your first specimen</b><span>A short field guide for agents: Agent ID, a question check, and ten prints a day.</span></a>
+      <a class="news-card" href="#n8"><span class="n-date">12 Nov 2026 · Design</span><b>Where the money moves</b><span>Grow payments and claim fees forward to the project wallet inside the same transaction.</span></a>
+      <a class="news-card" href="#n9"><span class="n-date">12 Nov 2026 · Verification</span><b>Contracts verified, pool funded</b><span>All three contracts match on Sourcify, and 2,000,000,000 $LAB already sit in a claim pool.</span></a>
+      <a class="news-card" href="#n10"><span class="n-date">12 Nov 2026 · Status</span><b>Genesis status</b><span>Bench, site and contracts are live. Experiment 1 opens by hand, and here is why.</span></a>
+    </div>
+
+    <article class="article" id="n1">
+      <p class="art-meta">12 Nov 2026 · Start here</p>
+      <h2>Welcome to the lab</h2>
+      <p>AgentLabs is a daily experiment laboratory on BNB Chain with no human bench workers. Its experimenters are software agents acting for people through Binance Agentic Wallet. Its benches are public smart contracts. Every day, one experiment opens, agents grow specimens inside it, and at midnight UTC the experiment seals forever.</p>
+      <p>Most mints end the moment they begin: a token appears, a picture resolves, and nothing about it can change again. A specimen here is not finished when it is printed. Its final form stays pending until the seal, and the form is decided by how many unique participants showed up that day, with one rare exception covered in a later note.</p>
+      <p>This site is a read-only window onto the lab. It connects no wallet and signs nothing. Printing and claiming happen through a visitor's own agent, guided by the public skill file. What follows in this journal is a plain record of how the lab works and what state it is in.</p>
+    </article>
+
+    <article class="article" id="n2">
+      <p class="art-meta">12 Nov 2026 · Mechanics</p>
+      <h2>One experiment a day</h2>
+      <p>An experiment is a day with a number. Experiment 1, Genesis, opens by hand and runs to the next 00:00 UTC. Every experiment after that runs a plain UTC day, opening and sealing at midnight. A sealed experiment is final: forms, counts and records inside it never change again.</p>
+      <p>Inside an open window, each wallet may grow up to ten specimens. One specimen per call keeps every print deliberate. A running board on the home page tracks specimens printed, unique participants so far, and the projected form if the day sealed at the current count, so a quiet morning and a loud evening read differently at a glance.</p>
+      <p>When the clock crosses midnight, the day seals itself by time. No keeper call decides it, and no late print slips in. A new experiment is already open on the other side of the line.</p>
+    </article>
+
+    <article class="article" id="n3">
+      <p class="art-meta">12 Nov 2026 · Forms</p>
+      <h2>Grown by the crowd</h2>
+      <p>A specimen's collective form follows unique participants in its experiment, counted at seal. Under 50 unique participants, specimens settle as Dormant: quiet, closed, still holding whatever a louder day might have woken. From 50 to 200, specimens Bloom. Above 200, a day runs wild and specimens come out Overgrown.</p>
+      <p>Unique means unique. One wallet printing ten specimens is one participant, so a crowd cannot be faked by a single busy address. Ten wallets printing one specimen each move the meter further than one wallet printing ten times.</p>
+      <p>This is the heart of the design. Scarcity in most collections is printed in advance by a rarity table. Here, a day's character is an outcome of behaviour. A sleepy Tuesday and a loud Saturday produce genuinely different collections, and every specimen carries proof of which kind of day it came from.</p>
+    </article>
+
+    <article class="article" id="n4">
+      <p class="art-meta">12 Nov 2026 · Forms</p>
+      <h2>Mutant: a break in the pattern</h2>
+      <p>Roughly three in a hundred specimens ignore the crowd completely. A specimen whose on-chain seed lands at 970 or higher modulo 1000 is a Mutant. It does not matter whether its day drew nine participants or nine hundred. A Mutant follows its own seed out of the jar.</p>
+      <p>Mutants override the collective form for claiming as well. A Mutant from a Dormant day still claims at a Mutant rate. That asymmetry is deliberate: the crowd decides most of what grows in the lab, but chance keeps a small door open that no crowd can close.</p>
+      <p>Because a seed is fixed at print time, a Mutant is knowable early to anyone who reads the contract, yet its claim only unlocks once its experiment seals like every other specimen. Patience is part of the specimen.</p>
+    </article>
+
+    <article class="article" id="n5">
+      <p class="art-meta">12 Nov 2026 · Records</p>
+      <h2>Lead Scientist of the day</h2>
+      <p>Every experiment records its first printer on-chain as Lead Scientist. One wallet per experiment holds the title, set by the very first successful print after a window opens, and it can never be reassigned.</p>
+      <p>The title carries no extra claim and no prize pool. It is a record, in the same spirit as a first signature in a lab notebook. Days in this lab are remembered by two things: how the crowd shaped the forms, and who walked in first.</p>
+      <p>Genesis has no Lead Scientist yet. That line in the notebook is still empty, and it will be filled by whichever agent prints first when doors open.</p>
+    </article>
+
+    <article class="article" id="n6">
+      <p class="art-meta">12 Nov 2026 · Claims</p>
+      <h2>What a sealed specimen earns</h2>
+      <p>Once an experiment seals, each of its specimens can claim $LAB once. A claim follows the current owner, pays from a funded pool of 2,000,000,000 LAB, and never burns the specimen. Amounts follow final form: Dormant pays 10,000 LAB, Bloomed pays 50,000, Overgrown pays 250,000, and a Mutant pays 1,000,000.</p>
+      <p>Each claim carries a small flat fee in BNB, fixed inside the LabClaim contract and forwarded to the project wallet inside the same transaction as the payout. Specimens from an experiment that is still open cannot claim yet; sealing is the key that turns.</p>
+      <p>Read the table as a map of days. A specimen from a quiet day is a modest claim and a cheap collectible. A specimen from a day the whole network talked about is worth twenty five times more, and a Mutant is worth a hundred times a Dormant. Nobody sets which day becomes which. That part belongs to the crowd.</p>
+    </article>
+
+    <article class="article" id="n7">
+      <p class="art-meta">12 Nov 2026 · Guide</p>
+      <h2>Your first specimen</h2>
+      <p>Printing runs through an agent, not through this website. An agent holding a Binance Agentic Wallet reads the public skill file, checks the live board values in the LabSpecimens contract, and prints. Three gates apply on every lane: the wallet must hold an Agent ID NFT from the SPACE ID registry, calls must come from a real account rather than a contract, and a free first print must answer a small on-chain question derived from the wallet address.</p>
+      <p>A first specimen in an experiment is free for Agent ID holders. Specimens two to five cost 0.0002 BNB each, and six to ten cost 0.0004 BNB each, up to ten per wallet per experiment. Exact payment matters: a paid print sends exactly the price the contract quotes for that wallet at that moment.</p>
+      <p>After printing, a specimen shows as Pending until its experiment seals. Then its form resolves, and its claim opens. Full step-by-step instructions live in the Docs and in the skill file linked from the footer of every page.</p>
+    </article>
+
+    <article class="article" id="n8">
+      <p class="art-meta">12 Nov 2026 · Design</p>
+      <h2>Where the money moves</h2>
+      <p>AgentLabs contracts hold no revenue. A paid print forwards its full BNB payment to the project wallet inside the same transaction that mints the specimen. A claim forwards its fee the same way. Contract balances for both contracts read zero by design, and anyone can verify that on BscScan at any hour.</p>
+      <p>The rule exists because held balances are a recurring failure mode in small on-chain projects: funds accumulate in a contract, a withdrawal function becomes a single point of trust, and holders are asked to take someone's word for where money went. Forwarding in the same transaction removes the question. Money is either in a user's wallet or in the project wallet, and both are public.</p>
+      <p>The $LAB claim pool is the one deliberate exception. Two billion LAB sit inside LabClaim because claims need a funded source, and that balance only ever moves out as claim payouts to specimen owners.</p>
+    </article>
+
+    <article class="article" id="n9">
+      <p class="art-meta">12 Nov 2026 · Verification</p>
+      <h2>Contracts verified, pool funded</h2>
+      <p>Three contracts run the lab. LabSpecimens (SPEC) at <span data-addr="nft">0x639329f5dc4317c44D9Fed961a1217ba845012F7</span> handles experiments, prints and forms. The $LAB token at <span data-addr="token">0xDbdB07307F5C9553e86470b820b82ea74C0DAD90</span> is a fixed supply of 10,000,000,000 with no mint function. LabClaim at <span data-addr="claim">0xA0873b7891898eed61847470d15B165484E42F92</span> pays claims by form.</p>
+      <p>All three are verified on Sourcify with exact source matches, which means the published code is the code running on-chain, readable by anyone. Local tests covered the full day cycle before deployment: free and paid prints, caps, thresholds at 50 and 200 participants, Mutant seeds, sealing, and claims by every form.</p>
+      <p>The claim pool was funded before any opening: 2,000,000,000 LAB, twenty percent of supply, moved into LabClaim in a transaction anyone can inspect. The remaining eighty percent sits in the project wallet. No presale was held and no $LAB liquidity pool exists yet; swap routes on this site stay marked Pool · Soon until one does.</p>
+    </article>
+
+    <article class="article" id="n10">
+      <p class="art-meta">12 Nov 2026 · Status</p>
+      <h2>Genesis status</h2>
+      <p>As of this note, the bench is built and the doors are still closed. The website is live with a full page set: board, tokenomics, whitepaper, docs, swap routes marked honestly as Pool · Soon, legal pages, a skill file for agents, and this journal. Contracts are deployed and verified. The claim pool is funded. The LabSpecimens board reads zero specimens, because Experiment 1 has not opened.</p>
+      <p>Genesis opens by hand, on a separate decision, because a daily ritual should start deliberately. Opening is a single owner call that starts Experiment 1 and sets its seal at the next midnight UTC. Claims open alongside it, ready for the moment a first experiment seals.</p>
+      <p>One piece is still being built before doors open: a parametric specimen renderer that draws each jar from its on-chain seed, so every specimen page shows the form its seed and its day produced. When Genesis opens, this journal will carry a launch note with the first day's numbers.</p>
+    </article>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html"><img src="img/logo.svg?v=1" alt="AgentLabs mark"><span class="bw">AGENT<i>LABS</i></span></a>
+      <p>A daily experiment lab on BNB Chain. Agents grow one experiment a day, the crowd of participants decides every form, and sealed specimens claim $LAB.</p>
+    </div>
+    <nav class="foot-col" aria-label="Project">
+      <h4>Project</h4>
+      <a href="index.html#today">Today's Experiment</a>
+      <a href="index.html#grow">Grow</a>
+      <a href="index.html#forms">Forms</a>
+      <a href="index.html#claim">Claim $LAB</a>
+      <a href="tokenomics.html">Tokenomics</a>
+      <a href="whitepaper.html">Whitepaper</a>
+      <a href="docs.html">Docs</a>
+      <a href="news.html">News</a>
+      <a href="swap.html">Swap</a>
+      <a href="agentlabs-skill.md">Skill file</a>
+      <a href="llms.txt">llms.txt</a>
+    </nav>
+    <nav class="foot-col" aria-label="Legal">
+      <h4>Legal</h4>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+    <div class="foot-col">
+      <h4>Contracts</h4>
+      <a class="fc" data-addr-link="nft" href="#"><b>LabSpecimens (SPEC)</b><span data-addr="nft">0x639329f5dc4317c44D9Fed961a1217ba845012F7</span></a>
+      <a class="fc" data-addr-link="token" href="#"><b>$LAB token</b><span data-addr="token">0xDbdB07307F5C9553e86470b820b82ea74C0DAD90</span></a>
+      <a class="fc" data-addr-link="claim" href="#"><b>LabClaim</b><span data-addr="claim">0xA0873b7891898eed61847470d15B165484E42F92</span></a>
+      <a class="fc" data-addr-link="registry" href="https://bscscan.com/address/0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F"><b>Agent ID registry</b><span data-addr="registry">0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F</span></a>
+      <p class="fc-note">BNB Chain · chain id 56. Contracts are live and verified on BscScan. Always verify an address before sending funds.</p>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>© 2026 AgentLabs · agentlabs.fun</span>
+    <span>No wallet connects here · Grow via your agent</span>
+  </div>
+</footer>
+
+<script src="lab/config.js?v=1"></script>
+<script src="js/app.js?v=2"></script>
+<script src="js/fx.js?v=3"></script>
+</body>
+</html>

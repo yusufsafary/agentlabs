@@ -38,7 +38,7 @@
 
   /* ---------- staggered reveals for extra blocks ---------- */
   if ("IntersectionObserver" in window && !reduced) {
-    var extra = document.querySelectorAll(".stat, .rung, .lcard, .faq details, .tiers, .doc > h2");
+    var extra = document.querySelectorAll(".stat, .rung, .lcard, .faq details, .tiers, .doc > h2, .article, .news-card");
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }

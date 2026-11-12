@@ -276,3 +276,21 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   body::before, body::after { animation: none; }
 }
+
+/* ================= News / lab journal ================= */
+.news-list { display: grid; gap: 12px; margin: 26px 0 8px; }
+@media (min-width: 760px) { .news-list { grid-template-columns: 1fr 1fr; } }
+.news-card {
+  display: block; padding: 16px 18px; border-radius: 18px; text-decoration: none;
+  background: var(--glass); border: 1px solid var(--line); color: var(--ink);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.news-card:hover { transform: translateY(-3px); border-color: rgba(141, 255, 79, 0.45); }
+.news-card .n-date { display: block; font-family: "Space Mono", monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--acid); margin-bottom: 7px; }
+.news-card b { display: block; font-family: "Funnel Display", "Archivo", sans-serif; font-size: 20px; line-height: 1.15; margin-bottom: 6px; }
+.news-card span:last-child { display: block; color: var(--mut); font-size: 14px; line-height: 1.5; }
+.article { margin-top: 44px; padding-top: 30px; border-top: 1px solid var(--line); scroll-margin-top: 84px; }
+.art-meta { font-family: "Space Mono", monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--acid); margin: 0 0 8px; }
+.article h2 { margin-top: 0; }
+.article span[data-addr] { word-break: break-all; }
+.news-list a, .news-list a b, .news-list a span { text-decoration: none; }
