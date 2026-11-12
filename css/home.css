@@ -364,3 +364,82 @@ main, .foot { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) {
   body::before, body::after, .stage-frame .stage-img, .tube-fill::after { animation: none; }
 }
+
+/* ================= Bench v4: visible motion ================= */
+/* Aurora: stronger and quicker so the drift reads on a phone */
+body::before { opacity: 0.85; animation-duration: 16s; }
+body::after { opacity: 0.8; animation-duration: 20s; }
+
+/* Brand mark breathes */
+.brand .logo { animation: logoGlow 3.2s ease-in-out infinite; }
+@keyframes logoGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(141, 255, 79, 0); }
+  50% { box-shadow: 0 0 18px rgba(141, 255, 79, 0.45); }
+}
+
+/* Status pill: live pinging dot */
+.pill { display: inline-flex; align-items: center; gap: 7px; }
+.pill::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%; flex: none;
+  background: var(--acid); animation: ping 1.8s ease-out infinite;
+}
+@keyframes ping {
+  0% { box-shadow: 0 0 0 0 rgba(141, 255, 79, 0.55); }
+  70% { box-shadow: 0 0 0 7px rgba(141, 255, 79, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(141, 255, 79, 0); }
+}
+
+/* Headline accent: shine travels through the gradient text */
+h1 .grad {
+  background-size: 220% 100%;
+  animation: gradFlow 5s linear infinite;
+}
+@keyframes gradFlow { from { background-position: 0% 0; } to { background-position: 220% 0; } }
+
+/* Hero: faster pan + periodic light sweep across the glass */
+.stage-frame .stage-img { animation-duration: 16s; }
+@keyframes kenburns { from { transform: scale(1.02) translateX(0.6%); } to { transform: scale(1.12) translateX(-1.6%); } }
+.stage-frame::after {
+  content: ""; position: absolute; top: -10%; bottom: -10%; width: 34%; left: -45%; z-index: 2;
+  background: linear-gradient(100deg, transparent, rgba(220, 255, 210, 0.13), transparent);
+  transform: skewX(-16deg); animation: sweep 5.5s ease-in-out infinite; pointer-events: none;
+}
+@keyframes sweep {
+  0%, 55% { left: -45%; } 85%, 100% { left: 125%; }
+}
+
+/* Floating stage tags bob */
+.stage .tag { animation: bob 4.6s ease-in-out infinite; }
+.stage .tag.t2 { animation-delay: -1.4s; }
+.stage .tag.t3 { animation-delay: -2.6s; }
+.stage .tag.t4 { animation-delay: -0.7s; }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+/* Tube track: travelling highlight so the meter lives even at 0% */
+.tube::before {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 64px; z-index: 2;
+  background: linear-gradient(90deg, transparent, rgba(141, 255, 79, 0.28), transparent);
+  animation: travel 3.2s ease-in-out infinite;
+}
+@keyframes travel { 0% { left: -70px; } 60%, 100% { left: 105%; } }
+
+/* Primary CTA: automatic shine loop */
+.btn.primary::after { animation: shineLoop 3.8s ease-in-out infinite; }
+@keyframes shineLoop { 0%, 55% { left: -60%; } 90%, 100% { left: 130%; } }
+
+/* Form card art: slow breathing zoom */
+.form-card img { animation: cardZoom 13s ease-in-out infinite alternate; }
+.form-card:nth-child(2) img { animation-delay: -4s; }
+.form-card:nth-child(3) img { animation-delay: -8s; }
+.form-card:nth-child(4) img { animation-delay: -2s; }
+@keyframes cardZoom { from { transform: scale(1); } to { transform: scale(1.09); } }
+
+/* Status stat tile: soft pulsing rim */
+.stats .stat:nth-child(4) { animation: rimPulse 3.4s ease-in-out infinite; }
+@keyframes rimPulse {
+  0%, 100% { border-color: var(--line); } 50% { border-color: rgba(141, 255, 79, 0.45); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand .logo, .pill::before, h1 .grad, .stage-frame::after, .stage .tag,
+  .tube::before, .btn.primary::after, .form-card img, .stats .stat:nth-child(4) { animation: none; }
+}
