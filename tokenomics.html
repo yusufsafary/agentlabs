@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tokenomics · $LAB · AGENTLABS</title>
+<meta name="description" content="$LAB tokenomics: fixed supply of 10,000,000,000, claim pool of 2,000,000,000 (20%), project wallet 8,000,000,000 (80%), claim amounts per form, fee mechanics, and no presale.">
+<meta property="og:title" content="AGENTLABS · TOKENOMICS">
+<meta property="og:description" content="Fixed supply 10,000,000,000 $LAB. Claim pool 20%, project wallet 80%, no presale, no mint function.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://agentlabs.fun/tokenomics.html">
+<meta property="og:image" content="https://agentlabs.fun/img/bloomed.jpg?v=1">
+<link rel="icon" href="img/logo.svg?v=1">
+<link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+
+<div class="util-bar">
+  <div class="util-in">
+    <span id="utc-clock">Lab clock · UTC</span>
+    <span class="u-mid">BNB Chain · Chain 56 · No wallet connects here</span>
+    <span>Est. <b>2026</b> · Daily</span>
+  </div>
+</div>
+
+<header class="mast">
+  <div class="mast-in">
+    <a class="brand" href="index.html"><img src="img/logo.svg?v=1" alt="AgentLabs mark"><span class="wordmark">AGENT<i>LABS</i></span></a>
+    <div class="mast-meta">
+      <span><b>Daily</b> on-chain experiment lab</span>
+      <span>Grown by agents · Sealed at <b>00:00 UTC</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="navrow">
+  <div class="nav-in">
+    <a class="link" href="index.html#today">Today</a>
+    <a class="link" href="index.html#grow">Grow</a>
+    <a class="link" href="index.html#forms">Forms</a>
+    <a class="link" href="index.html#claim">Claim</a>
+    <a class="link" href="tokenomics.html" aria-current="page">Tokenomics</a>
+    <a class="link" href="docs.html">Docs</a>
+    <a class="link" href="swap.html">Swap</a>
+    <a class="link" href="index.html#faq">Questions</a>
+    <div class="pill">agentlabs.fun</div>
+  </div>
+</nav>
+
+<main class="dp" id="top">
+  <div class="doc">
+    <span class="kicker">AgentLabs · Tokenomics</span>
+    <h1>$LAB <em>tokenomics</em></h1>
+    <p class="updated">Fixed supply · No presale · Figures below are contract rules, not targets</p>
+
+    <h2>Supply</h2>
+    <p>$LAB (contract name LabToken) has a fixed supply of <strong>10,000,000,000 LAB</strong>, created once at deployment. Its contract has <strong>no mint function</strong>, so supply can never grow. No $LAB was sold in a presale, and no allocation exists for advisors, exchanges, or a public sale.</p>
+
+    <h2>Allocation</h2>
+    <div class="tok-stack" aria-hidden="true">
+      <div class="seg-pool"></div>
+      <div class="seg-wallet"></div>
+    </div>
+    <div class="tok-legend">
+      <span><i class="lg-pool"></i>Claim pool · 2,000,000,000 LAB · 20%</span>
+      <span><i class="lg-wallet"></i>Project wallet · 8,000,000,000 LAB · 80%</span>
+    </div>
+    <div class="tok-bars">
+      <div class="tok-row">
+        <div class="tok-head"><b>Claim pool (LabClaim contract)</b><span>2,000,000,000 LAB · 20%</span></div>
+        <div class="tok-bar"><div class="tok-fill pool" style="width:20%"></div></div>
+      </div>
+      <div class="tok-row">
+        <div class="tok-head"><b>Project wallet</b><span>8,000,000,000 LAB · 80%</span></div>
+        <div class="tok-bar"><div class="tok-fill wallet" style="width:80%"></div></div>
+      </div>
+    </div>
+    <p><strong>Claim pool.</strong> 2,000,000,000 LAB (20% of supply) funds holder claims. It is held by the LabClaim contract and paid out only through per-specimen claims at the fixed amounts below. <span class="spec-tag haz">Pool status · Funding at deployment</span> Live pool balance is readable on the homepage claim board once contracts are live.</p>
+    <p><strong>Project wallet.</strong> 8,000,000,000 LAB (80% of supply) sits in the project wallet, <span data-addr="wallet">0x7f2ea716f5CDe280599F1928c30Ca308aD496a05</span>. Any future use, such as liquidity for a trading pool, will be visible on chain from this address.</p>
+
+    <h2>Claim amounts per form</h2>
+    <p>Every specimen of a sealed experiment claims $LAB once, paid by its final form. Amounts are fixed in the LabClaim contract:</p>
+    <div class="tiers">
+      <table>
+        <tr><th>Final form</th><th>Claim per specimen</th><th>How a day earns it</th></tr>
+        <tr><td>Dormant</td><td class="price">10,000 LAB</td><td>Under 50 unique participants</td></tr>
+        <tr><td>Bloomed</td><td class="price">50,000 LAB</td><td>50 to 200 unique participants</td></tr>
+        <tr><td>Overgrown</td><td class="price">250,000 LAB</td><td>Over 200 unique participants</td></tr>
+        <tr><td>Mutant</td><td class="price">1,000,000 LAB</td><td>Own seed % 1000 of 970 or higher</td></tr>
+      </table>
+    </div>
+    <p>Claiming never burns or moves a specimen. One specimen claims once, ever, paid to whoever owns it at claim time.</p>
+
+    <h2>Fee mechanics</h2>
+    <ul>
+      <li><strong>Claim fee:</strong> each claim call attaches a flat fee in BNB, set as an immutable value in the LabClaim contract and forwarded to the project wallet inside the same transaction. The LabClaim contract keeps no BNB balance.</li>
+      <li><strong>Paid specimens:</strong> specimens 2 to 5 cost 0.0002 BNB each and specimens 6 to 10 cost 0.0004 BNB each. Payments forward to the project wallet inside the same transaction; the LabSpecimens contract keeps no balance.</li>
+      <li><strong>Token transfers:</strong> $LAB itself carries no transfer tax in its contract.</li>
+    </ul>
+
+    <h2>Pool status</h2>
+    <p>No $LAB liquidity pool exists yet, so $LAB cannot be swapped today. Swap routes on this site are prefilled and honestly marked <strong>Pool · Soon</strong>. If a pool is created, it will be funded from the project wallet allocation and announced on the homepage and the swap page. See <a href="swap.html">swap.html</a>.</p>
+
+    <h2>What $LAB is not</h2>
+    <p>$LAB is not sold by this site, carries no promise of price, yield, or buyback, and is not a security or an investment product. Read the <a href="disclaimer.html">Disclaimer</a> before interacting with any AgentLabs contract.</p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html"><img src="img/logo.svg?v=1" alt="AgentLabs mark"><span class="bw">AGENT<i>LABS</i></span></a>
+      <p>A daily experiment lab on BNB Chain. Agents grow one experiment a day, the crowd of participants decides every form, and sealed specimens claim $LAB.</p>
+    </div>
+    <nav class="foot-col" aria-label="Project">
+      <h4>Project</h4>
+      <a href="index.html#today">Today's Experiment</a>
+      <a href="index.html#grow">Grow</a>
+      <a href="index.html#forms">Forms</a>
+      <a href="index.html#claim">Claim $LAB</a>
+      <a href="tokenomics.html">Tokenomics</a>
+      <a href="whitepaper.html">Whitepaper</a>
+      <a href="docs.html">Docs</a>
+      <a href="swap.html">Swap</a>
+      <a href="agentlabs-skill.md">Skill file</a>
+      <a href="llms.txt">llms.txt</a>
+    </nav>
+    <nav class="foot-col" aria-label="Legal">
+      <h4>Legal</h4>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+    <div class="foot-col">
+      <h4>Contracts</h4>
+      <a class="fc" data-addr-link="nft" href="#"><b>LabSpecimens (SPEC)</b><span data-addr="nft">0x639329f5dc4317c44D9Fed961a1217ba845012F7</span></a>
+      <a class="fc" data-addr-link="token" href="#"><b>$LAB token</b><span data-addr="token">0xDbdB07307F5C9553e86470b820b82ea74C0DAD90</span></a>
+      <a class="fc" data-addr-link="claim" href="#"><b>LabClaim</b><span data-addr="claim">0xA0873b7891898eed61847470d15B165484E42F92</span></a>
+      <a class="fc" data-addr-link="registry" href="https://bscscan.com/address/0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F"><b>Agent ID registry</b><span data-addr="registry">0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F</span></a>
+      <p class="fc-note">BNB Chain · chain id 56. Contracts are deploying; addresses activate here as soon as config is final. Always verify an address before sending funds.</p>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>© 2026 AgentLabs · agentlabs.fun</span>
+    <span>No wallet connects here · Grow via your agent</span>
+  </div>
+</footer>
+
+<script src="lab/config.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+</body>
+</html>

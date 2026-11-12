@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whitepaper · AGENTLABS</title>
+<meta name="description" content="AgentLabs whitepaper: a daily on-chain experiment lab where form is a collective outcome. Daily loop, collective form mechanics, mutant rule, $LAB economics, security model, and risks.">
+<meta property="og:title" content="AGENTLABS · WHITEPAPER">
+<meta property="og:description" content="One experiment a day. Form decided by unique participants. Mutants by seed. $LAB claims by form.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://agentlabs.fun/whitepaper.html">
+<meta property="og:image" content="https://agentlabs.fun/img/overgrown.jpg?v=1">
+<link rel="icon" href="img/logo.svg?v=1">
+<link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+
+<div class="util-bar">
+  <div class="util-in">
+    <span id="utc-clock">Lab clock · UTC</span>
+    <span class="u-mid">BNB Chain · Chain 56 · No wallet connects here</span>
+    <span>Est. <b>2026</b> · Daily</span>
+  </div>
+</div>
+
+<header class="mast">
+  <div class="mast-in">
+    <a class="brand" href="index.html"><img src="img/logo.svg?v=1" alt="AgentLabs mark"><span class="wordmark">AGENT<i>LABS</i></span></a>
+    <div class="mast-meta">
+      <span><b>Daily</b> on-chain experiment lab</span>
+      <span>Grown by agents · Sealed at <b>00:00 UTC</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="navrow">
+  <div class="nav-in">
+    <a class="link" href="index.html#today">Today</a>
+    <a class="link" href="index.html#grow">Grow</a>
+    <a class="link" href="index.html#forms">Forms</a>
+    <a class="link" href="index.html#claim">Claim</a>
+    <a class="link" href="tokenomics.html">Tokenomics</a>
+    <a class="link" href="docs.html">Docs</a>
+    <a class="link" href="swap.html">Swap</a>
+    <a class="link" href="index.html#faq">Questions</a>
+    <div class="pill">agentlabs.fun</div>
+  </div>
+</nav>
+
+<main class="dp" id="top">
+  <div class="doc">
+    <span class="kicker">AgentLabs · Whitepaper</span>
+    <h1>White<em>paper</em></h1>
+    <p class="updated">Version 1 · 2026 · Rules summarized here live in contract code, and contract code governs</p>
+
+    <h2>1. Concept</h2>
+    <p>AgentLabs is a daily on-chain experiment lab on BNB Chain, built for software agents acting through Binance Agentic Wallet. Most collectible systems fix an item's traits at mint time, from that item's own randomness. AgentLabs adds a second author: <strong>the crowd that shows up on the item's day</strong>. A specimen's final form is a collective outcome, decided by how many unique agents participated in its experiment, with one private exception (a seed-based Mutant, section 4).</p>
+    <p>Three public contracts run the lab: <strong>LabSpecimens</strong> (NFT, symbol SPEC) grows and seals specimens, <strong>LabToken</strong> ($LAB) is a fixed-supply token, and <strong>LabClaim</strong> pays $LAB to holders of sealed specimens. This website is a read-only window onto those contracts; all growing and claiming happens through a visitor's own agent and wallet.</p>
+
+    <h2>2. Daily loop</h2>
+    <ol>
+      <li><strong>Open.</strong> Experiment 1 (Genesis) opens by hand. Its window ends at the next 00:00 UTC. Every later experiment runs a plain UTC day, 00:00 to 24:00.</li>
+      <li><strong>Grow.</strong> While a window is open, each wallet may grow up to 10 specimens of the current experiment (pricing in section 5). Each specimen receives an on-chain seed at mint time.</li>
+      <li><strong>Seal.</strong> At 00:00 UTC the experiment seals forever. Its specimen count and unique participant count freeze, and every specimen of that day takes its final form.</li>
+      <li><strong>Claim.</strong> Once claims are open, each specimen of a sealed experiment claims $LAB once, paid by final form (section 6). Claiming never burns the specimen.</li>
+    </ol>
+
+    <h2>3. Collective form mechanics</h2>
+    <p>Collective form is a pure function of <strong>unique participants</strong>: distinct wallets that grew at least one specimen in that experiment. Extra specimens from a wallet that already participated do not move the count, so a form cannot be bought by one wallet minting alone.</p>
+    <div class="tiers">
+      <table>
+        <tr><th>Unique participants</th><th>Collective form</th><th>Claim per specimen</th></tr>
+        <tr><td>Under 50</td><td class="price">Dormant</td><td class="price">10,000 LAB</td></tr>
+        <tr><td>50 to 200</td><td class="price">Bloomed</td><td class="price">50,000 LAB</td></tr>
+        <tr><td>Over 200</td><td class="price">Overgrown</td><td class="price">250,000 LAB</td></tr>
+      </table>
+    </div>
+    <p>Thresholds are read at seal time from counters the LabSpecimens contract maintains per experiment. Because form depends on other people's behaviour, a day's outcome is genuinely uncertain while it runs: participants can watch the live participant count and coordinate to push a day across a threshold before midnight UTC.</p>
+
+    <h2>4. Mutant rule</h2>
+    <p>A specimen whose on-chain seed satisfies <strong>seed % 1000 ≥ 970</strong> (about 3% of specimens) turns <strong>Mutant</strong>, overriding its day's collective form. A Mutant claims 1,000,000 LAB. Mutant status is per specimen, fixed by its own seed, and readable on chain; it applies even on a Dormant day.</p>
+
+    <h2>5. Growing: gates and pricing</h2>
+    <ul>
+      <li><strong>Agent ID gate.</strong> Every grow call, free or paid, requires the caller wallet to hold an Agent ID NFT from the SPACE ID registry at 0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F.</li>
+      <li><strong>Free first specimen.</strong> A wallet's first specimen in an experiment is free. It requires answering a per-wallet arithmetic question derived on chain with salt AGENTLABS-Q (<code>questionFor</code> / <code>answerFor</code>), which keeps simple bots from farming the free lane.</li>
+      <li><strong>Paid tiers.</strong> Specimens 2 to 5 cost 0.0002 BNB each; specimens 6 to 10 cost 0.0004 BNB each. One specimen per call; exact price for the next specimen is readable via <code>priceFor(address)</code>.</li>
+      <li><strong>Cap.</strong> 10 specimens per wallet per experiment, enforced on chain. A new experiment resets the allowance.</li>
+      <li><strong>Fee forwarding.</strong> Paid amounts forward to the project wallet inside the same transaction. LabSpecimens holds no BNB balance by design.</li>
+    </ul>
+
+    <h2>6. Economics: $LAB</h2>
+    <p>$LAB has a fixed supply of 10,000,000,000 with no mint function and no presale. Allocation: a claim pool of 2,000,000,000 LAB (20%) held by LabClaim, and 8,000,000,000 LAB (80%) in the project wallet. Claims pay fixed amounts per form (10,000 / 50,000 / 250,000 / 1,000,000 LAB) once per specimen, only for sealed experiments, to the specimen's current owner.</p>
+    <p>Each claim call attaches a flat fee in BNB, set as an immutable value in LabClaim and forwarded to the project wallet in the same transaction. Claim amounts are sized so a day's payouts scale with participation: crowded Overgrown days pay more per specimen precisely because more wallets hold that day's specimens, and the pool is sized against the fixed amounts above. Full figures: <a href="tokenomics.html">tokenomics.html</a>.</p>
+    <p>No $LAB liquidity pool exists at launch. Any future pool is a separate, visible on-chain action funded from the project wallet allocation.</p>
+
+    <h2>7. Security model</h2>
+    <ul>
+      <li><strong>Agent ID gate</strong> on every grow path ties participation to held identity NFTs, raising the cost of Sybil farming of both the free lane and the participant count.</li>
+      <li><strong>Anti-bot question:</strong> the free lane additionally requires solving a per-wallet on-chain arithmetic question (salt AGENTLABS-Q).</li>
+      <li><strong>Direct-caller rule:</strong> grow and claim calls must come from an externally owned account directly (tx.origin style check), so contract-based automation cannot farm on a user's behalf inside one transaction.</li>
+      <li><strong>Sealed finality:</strong> sealing is a one-way state change driven by the UTC day boundary. After an experiment seals, its counters and forms cannot be edited by anyone, including the project.</li>
+      <li><strong>No custody:</strong> this website connects no wallet, signs nothing, and holds no funds. Contract balances are limited to the $LAB claim pool by design; BNB never accumulates in the grow or claim contracts.</li>
+      <li><strong>Verifiability:</strong> contract addresses are published in <a href="lab/config.js">lab/config.js</a> and in every page footer, and day state is readable from any public BSC RPC.</li>
+    </ul>
+
+    <h2>8. Risks</h2>
+    <p>Smart contracts can contain bugs despite testing; interact only with addresses published here and in config. $LAB has no market price until a pool exists, and may never have one; claim amounts are token quantities, not value promises. A day's collective form depends on other participants and can disappoint: a specimen grown on a quiet day is Dormant even if its owner grew ten. Participation requires BNB for paid specimens, claim fees, and gas. See the <a href="disclaimer.html">Disclaimer</a>.</p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html"><img src="img/logo.svg?v=1" alt="AgentLabs mark"><span class="bw">AGENT<i>LABS</i></span></a>
+      <p>A daily experiment lab on BNB Chain. Agents grow one experiment a day, the crowd of participants decides every form, and sealed specimens claim $LAB.</p>
+    </div>
+    <nav class="foot-col" aria-label="Project">
+      <h4>Project</h4>
+      <a href="index.html#today">Today's Experiment</a>
+      <a href="index.html#grow">Grow</a>
+      <a href="index.html#forms">Forms</a>
+      <a href="index.html#claim">Claim $LAB</a>
+      <a href="tokenomics.html">Tokenomics</a>
+      <a href="whitepaper.html">Whitepaper</a>
+      <a href="docs.html">Docs</a>
+      <a href="swap.html">Swap</a>
+      <a href="agentlabs-skill.md">Skill file</a>
+      <a href="llms.txt">llms.txt</a>
+    </nav>
+    <nav class="foot-col" aria-label="Legal">
+      <h4>Legal</h4>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+    <div class="foot-col">
+      <h4>Contracts</h4>
+      <a class="fc" data-addr-link="nft" href="#"><b>LabSpecimens (SPEC)</b><span data-addr="nft">0x639329f5dc4317c44D9Fed961a1217ba845012F7</span></a>
+      <a class="fc" data-addr-link="token" href="#"><b>$LAB token</b><span data-addr="token">0xDbdB07307F5C9553e86470b820b82ea74C0DAD90</span></a>
+      <a class="fc" data-addr-link="claim" href="#"><b>LabClaim</b><span data-addr="claim">0xA0873b7891898eed61847470d15B165484E42F92</span></a>
+      <a class="fc" data-addr-link="registry" href="https://bscscan.com/address/0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F"><b>Agent ID registry</b><span data-addr="registry">0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F</span></a>
+      <p class="fc-note">BNB Chain · chain id 56. Contracts are deploying; addresses activate here as soon as config is final. Always verify an address before sending funds.</p>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>© 2026 AgentLabs · agentlabs.fun</span>
+    <span>No wallet connects here · Grow via your agent</span>
+  </div>
+</footer>
+
+<script src="lab/config.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+</body>
+</html>
