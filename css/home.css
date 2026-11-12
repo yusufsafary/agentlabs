@@ -443,3 +443,59 @@ h1 .grad {
   .brand .logo, .pill::before, h1 .grad, .stage-frame::after, .stage .tag,
   .tube::before, .btn.primary::after, .form-card img, .stats .stat:nth-child(4) { animation: none; }
 }
+
+/* ================= Bench v5: spectacle layer ================= */
+@property --a { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@keyframes rimspin { to { --a: 360deg; } }
+
+/* Hero: isolation for light layers + drifting spore canvas */
+.hero { position: relative; isolation: isolate; }
+.hero > *:not(.spores) { position: relative; z-index: 1; }
+.spores { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+
+/* Stage rim: rotating conic light ring */
+.stage-frame::before {
+  content: ""; position: absolute; inset: 0; border-radius: 26px; padding: 2px; z-index: 3; pointer-events: none;
+  background: conic-gradient(from var(--a),
+    rgba(141, 255, 79, 0) 0%, rgba(141, 255, 79, 0.85) 10%, rgba(140, 79, 255, 0.75) 20%,
+    rgba(141, 255, 79, 0) 32%, rgba(141, 255, 79, 0) 58%, rgba(141, 255, 79, 0.55) 72%,
+    rgba(141, 255, 79, 0) 86%, rgba(141, 255, 79, 0) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: rimspin 7s linear infinite;
+}
+
+/* Tube: flowing liquid wave on track and fill */
+.tube::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 9px; z-index: 1;
+  background: radial-gradient(circle at 8px -3px, transparent 9px, rgba(141, 255, 79, 0.28) 10px);
+  background-size: 18px 9px; animation: waveflow 1.6s linear infinite; pointer-events: none;
+}
+.tube-fill::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 8px;
+  background: radial-gradient(circle at 8px 9px, transparent 9px, rgba(10, 26, 10, 0.35) 10px);
+  background-size: 18px 8px; animation: waveflow 1.1s linear infinite reverse; pointer-events: none;
+}
+@keyframes waveflow { to { background-position-x: 18px; } }
+
+/* Primary CTA breathes */
+.btn.primary { animation: ctaBreath 2.6s ease-in-out infinite; }
+@keyframes ctaBreath {
+  0%, 100% { box-shadow: 0 10px 26px rgba(141, 255, 79, 0.22); }
+  50% { box-shadow: 0 10px 38px rgba(141, 255, 79, 0.5); }
+}
+
+/* Mutant card: rotating violet rim */
+.form-card.mutant::after {
+  content: ""; position: absolute; inset: 0; border-radius: 24px; padding: 2px; pointer-events: none;
+  background: conic-gradient(from var(--a),
+    rgba(140, 79, 255, 0) 0%, rgba(140, 79, 255, 0.9) 14%, rgba(141, 255, 79, 0.7) 26%,
+    rgba(140, 79, 255, 0) 40%, rgba(140, 79, 255, 0) 64%, rgba(140, 79, 255, 0.6) 80%,
+    rgba(140, 79, 255, 0) 94%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: rimspin 6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .stage-frame::before, .tube::after, .tube-fill::before, .btn.primary, .form-card.mutant::after { animation: none; }
+}
