@@ -540,3 +540,31 @@ h1 .grad {
 .mb-btn.ghost{margin-left:auto;background:transparent;color:var(--ink);border:1px solid var(--line)}
 .mb-btn.ghost + .mb-btn{margin-left:0}
 @media (max-width:640px){.cp-row{flex-direction:column}.cp-btn{width:100%}}
+
+/* ===== Smooth pack v9: glide everywhere ===== */
+html{scroll-padding-top:96px;scrollbar-width:thin;scrollbar-color:rgba(141,255,79,.45) #0a0f0b}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-track{background:#0a0f0b}
+::-webkit-scrollbar-thumb{background:rgba(141,255,79,.35);border-radius:99px;border:2px solid #0a0f0b}
+body{-webkit-tap-highlight-color:transparent;text-rendering:optimizeLegibility}
+.rv{transition:opacity .95s cubic-bezier(.22,1,.36,1),transform .95s cubic-bezier(.22,1,.36,1);transform:translateY(16px) scale(.995)}
+.tube-fill{transition:width 1.15s cubic-bezier(.22,1,.36,1)}
+.btn{transition:transform .28s cubic-bezier(.22,1,.36,1),background-color .28s ease,color .28s ease,border-color .28s ease,box-shadow .28s ease}
+.btn:active{transform:scale(.97)}
+.btn.ghost:hover{border-color:rgba(141,255,79,.55);color:var(--ink)}
+.lcard{transition:transform .35s cubic-bezier(.22,1,.36,1),border-color .35s ease,background-color .35s ease}
+.lcard:hover{transform:translateY(-2px);border-color:rgba(141,255,79,.45)}
+.stat{transition:border-color .35s ease,background-color .35s ease}
+.faq summary{transition:color .25s ease}
+.faq summary:hover{color:var(--acid)}
+.form-card{transition:border-color .35s ease}
+.form-row{scroll-behavior:smooth;scroll-snap-type:x proximity;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
+.ticker-track{transform:translateZ(0)}
+.copy-btn{transition:transform .25s cubic-bezier(.22,1,.36,1),background-color .25s ease}
+.copy-btn:active{transform:scale(.94)}
+.cp-row input{transition:border-color .3s ease,box-shadow .3s ease}
+.cp-row input:focus{box-shadow:0 0 0 3px rgba(141,255,79,.15)}
+.chip{transition:border-color .3s ease,color .3s ease}
+details p{animation:faqIn .45s cubic-bezier(.22,1,.36,1)}
+@keyframes faqIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rv,.tube-fill,.btn,.lcard,.stat,.form-card,.copy-btn,.chip{transition:none}details p{animation:none}}
