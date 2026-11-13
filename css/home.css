@@ -508,3 +508,16 @@ h1 .grad {
   padding: 7px 11px; border-radius: 999px; text-transform: uppercase; white-space: nowrap;
   text-decoration: none;
 }
+
+/* ===== News ticker: small looping strip above the bench ===== */
+.ticker{position:relative;z-index:30;display:flex;align-items:stretch;gap:0;background:#0a120c;border-bottom:1px solid rgba(141,255,79,.28);height:36px;overflow:hidden}
+.ticker-tag{display:flex;align-items:center;padding:0 14px;background:#8dff4f;color:#0a120c;font-family:"Space Mono",monospace;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;flex:0 0 auto}
+.ticker-view{flex:1 1 auto;overflow:hidden;display:flex;align-items:center;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.ticker-track{display:inline-flex;align-items:center;white-space:nowrap;will-change:transform;animation:tickmove 46s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-track a{color:#e6f5e2;text-decoration:none;font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.4px;padding:0 6px}
+.ticker-track a:hover{color:#8dff4f}
+.ticker-track i{color:#8dff4f;font-style:normal;font-size:12px;padding:0 8px}
+@keyframes tickmove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (max-width:640px){.ticker{height:32px}.ticker-tag{font-size:10px;padding:0 10px}.ticker-track a{font-size:11px}}
+@media (prefers-reduced-motion:reduce){.ticker-track{animation-duration:120s}}
