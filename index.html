@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://agentlabs.fun/">
 <meta property="og:image" content="https://agentlabs.fun/img/lineup.jpg?v=1">
 <link rel="icon" href="img/logo.svg?v=1">
-<link rel="stylesheet" href="css/home.css?v=7">
+<link rel="stylesheet" href="css/home.css?v=8">
 </head>
 <body>
 
@@ -74,6 +74,7 @@
 
     <div class="cta-row">
       <a class="btn primary" href="#grow">Grow with your agent</a>
+      <a class="btn ghost" href="#claim">Claim $LAB</a>
       <a class="btn ghost" href="agentlabs-skill.md">Skill file</a>
     </div>
   </section>
@@ -81,6 +82,7 @@
   <!-- ===== Forms ===== -->
   <section class="sec forms" id="forms">
     <div class="sec-head">
+      <span class="sec-kick">01 · Forms</span>
       <h2>What today can become</h2>
       <p>Form locks in at seal time and sets the $LAB claim. A specimen whose own seed lands at 970 or higher modulo 1000 turns Mutant, whatever the crowd did.</p>
     </div>
@@ -119,6 +121,7 @@
   <!-- ===== Grow ===== -->
   <section class="sec" id="grow">
     <div class="sec-head">
+      <span class="sec-kick">02 · Grow</span>
       <h2>Grow with your agent</h2>
       <p>No wallet connects to this site. Your Binance agent does the growing: paste a prompt, approve a transaction. Payments forward to the project wallet inside the same transaction.</p>
     </div>
@@ -155,6 +158,7 @@ Rules from the skill file:
   <!-- ===== Claim ===== -->
   <section class="sec" id="claim">
     <div class="sec-head">
+      <span class="sec-kick">03 · Claim</span>
       <h2>Sealed specimens claim $LAB</h2>
       <p>Once an experiment seals, every specimen of that day claims $LAB once, by final form. Claiming never burns or moves your specimen. A flat claim fee in BNB forwards to the project wallet in the same transaction.</p>
     </div>
@@ -163,7 +167,20 @@ Rules from the skill file:
       <div class="stat"><b id="c-pool">0</b><span>Claim pool</span></div>
       <div class="stat"><b id="c-status">SOON</b><span>Status</span></div>
     </div>
-    <p class="board-note" id="c-note">Claims are not open yet. Specimens of sealed experiments become claimable when claims open. Watch this board.</p>
+    <p class="board-note" id="c-note">Claims are open. Specimens of sealed experiments claim $LAB by form. Watch this board.</p>
+    <div class="claim-panel glass">
+      <div class="cp-head"><b>Claim checker</b><span>Read-only · reads the contract, signs nothing</span></div>
+      <div class="cp-row">
+        <input id="ck-id" type="number" min="1" step="1" inputmode="numeric" placeholder="Your specimen Nº, e.g. 3" aria-label="Specimen number">
+        <button class="btn primary cp-btn" id="ck-go" type="button">Check specimen</button>
+      </div>
+      <p class="cp-result" id="ck-result">Enter a specimen number to see its form, claim amount and status.</p>
+      <div class="cp-actions">
+        <button class="btn primary" id="ck-copy" type="button">Copy claim prompt for my agent</button>
+        <a class="btn ghost" href="agentlabs-skill.md">Skill file</a>
+      </div>
+      <p class="fine">One tap copies a ready prompt. Your agent verifies, shows a preview, signs and pays a flat claim fee. This page never connects a wallet.</p>
+    </div>
     <div class="console glass">
       <div class="console-head"><b>Claim prompt</b><button class="copy-btn" id="copy-prompt-claim" type="button">Copy prompt</button></div>
       <pre id="claim-prompt">Read https://agentlabs.fun/agentlabs-skill.md and claim $LAB for my AgentLabs specimens on BNB Chain (chain id 56).
@@ -179,6 +196,11 @@ Rules from the skill file:
 
   <!-- ===== More ===== -->
   <section class="sec" id="more">
+    <div class="sec-head">
+      <span class="sec-kick">04 · Explore</span>
+      <h2>Explore the lab</h2>
+      <p>Reading room and routes out: tokenomics, a whitepaper, step by step docs, a lab journal, and swap routes that stay honest while a pool is still marked Soon.</p>
+    </div>
     <div class="link-cards">
       <a class="lcard" href="tokenomics.html"><b>Tokenomics</b><span>10,000,000,000 $LAB · 20% claim pool · no presale</span></a>
       <a class="lcard" href="whitepaper.html"><b>Whitepaper</b><span>Daily loop, collective forms, security model</span></a>
@@ -256,11 +278,13 @@ Rules from the skill file:
 
 <script src="lab/config.js?v=1"></script>
 <script src="js/board.js?v=1"></script>
+<script src="js/claim.js?v=1"></script>
 <script src="js/app.js?v=2"></script>
 <script src="js/fx.js?v=3"></script>
 <div class="mobilebar">
   <div class="mb-info"><small>Experiment</small><b id="mb-exp">Nº 1 · Genesis</b></div>
   <div class="mb-info"><small>Seals in</small><b id="mb-seal">Standby</b></div>
+  <a class="mb-btn ghost" href="#claim">Claim</a>
   <a class="mb-btn" href="#grow">Grow today</a>
 </div>
 </body>
