@@ -100,8 +100,17 @@
     return "Dormant";
   }
   function applyForm(participants) {
+    var pct = Math.min(100, (participants / 300) * 100);
     var bar = $("f-bar");
-    if (bar) bar.style.width = Math.min(100, (participants / 200) * 100) + "%";
+    if (bar) bar.style.width = pct + "%";
+    var needle = $("g-needle");
+    if (needle) needle.style.left = pct + "%";
+    setText("g-part", fmt(participants));
+    var wrap = document.querySelector(".tube-wrap.gauge");
+    if (wrap) {
+      wrap.classList.remove("form-dormant", "form-bloomed", "form-overgrown");
+      wrap.classList.add("form-" + formOf(participants).toLowerCase());
+    }
     setText("f-proj", "Projected form · " + formOf(participants));
     setText("f-note", participants >= 200
       ? fmt(participants) + " unique participants. Past 200, extra participants deepen an Overgrown day rather than change its form."
@@ -124,6 +133,7 @@
     }
     setText("b-seal", txt);
     setText("mb-seal", sealTs ? txt : "Standby");
+    setText("g-count", sealTs ? txt : "--:--:--");
   }
   setInterval(tickSeal, 1000);
 
@@ -140,6 +150,9 @@
     setText("b-note", "Genesis has not opened yet. Experiment N\u00ba 1 opens by hand, and its window runs to the next 00:00 UTC. Every later experiment runs a plain UTC day, then seals for good.");
     var bar = $("f-bar");
     if (bar) bar.style.width = "0%";
+    var needle0 = $("g-needle");
+    if (needle0) needle0.style.left = "0%";
+    setText("g-part", "0");
     setText("f-proj", "Projected form · Awaiting first experiment");
     setText("f-note", "Form is decided by unique participants on the day: under 50 stays Dormant, 50 to 200 Blooms, over 200 goes Overgrown.");
     if (typeof total === "number" && total > 0) setNum("b-spec", total);

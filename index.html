@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://agentlabs.fun/">
 <meta property="og:image" content="https://agentlabs.fun/img/lineup.jpg?v=1">
 <link rel="icon" href="img/logo.svg?v=1">
-<link rel="stylesheet" href="css/home.css?v=9">
+<link rel="stylesheet" href="css/home.css?v=10">
 </head>
 <body>
 
@@ -19,16 +19,16 @@
   <span class="ticker-tag">News</span>
   <div class="ticker-view"><div class="ticker-track">
     <a href="news#n13">$LAB pool opens 18 November · Uniswap</a><i>·</i>
-    <a href="news#n12">Genesis sealed · 1,134 specimens · 1,106 agents · form Overgrown</a><i>·</i>
-    <a href="news#n12">Claims open for sealed specimens · 250,000 $LAB each</a><i>·</i>
-    <a href="news#n12">Experiment Nº 2 is growing now · first specimen free</a><i>·</i>
+    <a href="news#n12">Experiment Nº 2 sealed · 1,345 specimens · 1,297 agents · form Overgrown</a><i>·</i>
+    <a href="news#n12">Experiment Nº 3 is growing now · seals at 00:00 UTC</a><i>·</i>
+    <a href="news#n13">Unclaimed $LAB burns at launch · claim sealed specimens</a><i>·</i>
     <a href="news#n4">Mutants claim 1,000,000 $LAB</a><i>·</i>
     <a href="news#n7">First specimen free for Agent ID holders</a><i>·</i>
     <a href="news#n9">Contracts verified · claim pool funded 2,000,000,000 $LAB</a><i>·</i>
     <a href="news#n13">$LAB pool opens 18 November · Uniswap</a><i>·</i>
-    <a href="news#n12">Genesis sealed · 1,134 specimens · 1,106 agents · form Overgrown</a><i>·</i>
-    <a href="news#n12">Claims open for sealed specimens · 250,000 $LAB each</a><i>·</i>
-    <a href="news#n12">Experiment Nº 2 is growing now · first specimen free</a><i>·</i>
+    <a href="news#n12">Experiment Nº 2 sealed · 1,345 specimens · 1,297 agents · form Overgrown</a><i>·</i>
+    <a href="news#n12">Experiment Nº 3 is growing now · seals at 00:00 UTC</a><i>·</i>
+    <a href="news#n13">Unclaimed $LAB burns at launch · claim sealed specimens</a><i>·</i>
     <a href="news#n4">Mutants claim 1,000,000 $LAB</a><i>·</i>
     <a href="news#n7">First specimen free for Agent ID holders</a><i>·</i>
     <a href="news#n9">Contracts verified · claim pool funded 2,000,000,000 $LAB</a><i>·</i>
@@ -45,7 +45,7 @@
   <!-- ===== Hero: the bench ===== -->
   <section class="hero">
     <div class="chips">
-      <span class="chip" id="b-exp">Nº 1 · Genesis</span>
+      <span class="chip" id="b-exp">Nº 3</span>
       <span class="chip dim">Seals at 00:00 UTC</span>
       <span class="chip dim">BNB Chain</span>
     </div>
@@ -55,15 +55,15 @@
     <div class="stage">
       <div class="stage-glow" aria-hidden="true"></div>
       <div class="stage-frame"><img class="stage-img" src="img/lineup.jpg?v=1" alt="Four specimen jars on the bench: Dormant, Bloomed, Overgrown and Mutant"></div>
-      <span class="stage-tag">Form · Pending</span>
-      <span class="stage-tag alt">Experiment Nº 1</span>
+      <span class="stage-tag" id="stage-form">Form · Pending</span>
+      <span class="stage-tag alt">Experiment Nº 3</span>
     </div>
 
-    <div class="tube-wrap">
-      <div class="tube-head"><span id="f-proj">Projected form · Awaiting first experiment</span><span class="tube-scale">0 · 50 · 200+</span></div>
-      <div class="tube"><div class="tube-fill" id="f-bar" style="width:0%"></div><i class="mark m50"></i><i class="mark m200"></i></div>
-      <div class="tube-labels"><span>Dormant</span><span>Bloomed · 50</span><span>Overgrown · 200+</span></div>
-      <p class="tube-note" id="f-note">Form is decided by unique participants on the day: under 50 stays Dormant, 50 to 200 Blooms, over 200 goes Overgrown.</p>
+    <div class="tube-wrap gauge">
+      <div class="tube-head"><span id="f-proj">Projected form · Awaiting first experiment</span><span class="gauge-live"><b id="g-part">0</b> participants · seals in <b id="g-count">--:--:--</b></span></div>
+      <div class="tube gauge-tube"><span class="band b-dorm"></span><span class="band b-bloom"></span><span class="band b-over"></span><div class="tube-fill" id="f-bar" style="width:0%"></div><i class="mark m50"></i><i class="mark m200"></i><i class="needle" id="g-needle" style="left:0%"></i></div>
+      <div class="tube-labels band-labels"><span class="bl bl-dorm">Dormant · under 50 · claims 10,000</span><span class="bl bl-bloom">Bloomed · 50 to 200 · claims 50,000</span><span class="bl bl-over">Overgrown · 200+ · claims 250,000</span></div>
+      <p class="tube-note" id="f-note">Form is decided by unique participants on the day: under 50 stays Dormant, 50 to 200 Blooms, over 200 goes Overgrown. Claim values in $LAB, per sealed specimen.</p>
     </div>
 
     <div class="stats">
@@ -72,7 +72,12 @@
       <div class="stat"><b id="b-seal">Not opened</b><span>Seals in</span></div>
       <div class="stat"><b id="b-status">Standby</b><span>Status</span></div>
     </div>
-    <p class="board-note" id="b-note">Experiment Nº 1 is open now. Its window runs to 00:00 UTC, then it seals for good. Every later experiment runs a plain UTC day.</p>
+    <div class="ledger" aria-label="Lab ledger">
+      <div class="stat"><b id="g-total">···</b><span>Specimens grown, all experiments</span></div>
+      <div class="stat"><b id="g-unclaimed">···</b><span>Sealed specimens unclaimed</span></div>
+      <div class="stat"><b id="g-claimed">···</b><span>Specimens claimed</span></div>
+    </div>
+    <p class="board-note" id="b-note">Experiment Nº 3 is growing now. Its window runs to 00:00 UTC, then it seals for good.</p>
 
     <div class="cta-row">
       <a class="btn primary" href="#grow">Grow with your agent</a>
@@ -88,6 +93,15 @@
       <h2>What today can become</h2>
       <p>Form locks in at seal time and sets the $LAB claim. A specimen whose own seed lands at 970 or higher modulo 1000 turns Mutant, whatever the crowd did.</p>
     </div>
+    <div class="stepper" aria-label="Form path">
+      <button class="step on" type="button" data-form="dormant">Dormant<span>10,000 $LAB</span></button>
+      <span class="step-arrow" aria-hidden="true">→</span>
+      <button class="step" type="button" data-form="bloomed">Bloomed<span>50,000 $LAB</span></button>
+      <span class="step-arrow" aria-hidden="true">→</span>
+      <button class="step" type="button" data-form="overgrown">Overgrown<span>250,000 $LAB</span></button>
+      <button class="step mutant" type="button" data-form="mutant">Mutant branch<span>1,000,000 $LAB</span></button>
+    </div>
+    <p class="step-note" id="step-note">Under 50 unique agents on the day, and a specimen stays Dormant. Tap a step to inspect its jar.</p>
     <div class="form-row">
       <article class="form-card dormant">
         <div class="fc-art"><img src="img/dormant.jpg?v=1" alt="A Dormant specimen curled asleep in its jar" loading="lazy" decoding="async"></div>
@@ -120,10 +134,43 @@
     </div>
   </section>
 
+  <!-- ===== Archive ===== -->
+  <section class="sec archive" id="archive">
+    <div class="sec-head">
+      <span class="sec-kick">02 · Archive</span>
+      <h2>Sealed experiments</h2>
+      <p>Finished days, pressed and filed. Every sealed specimen claims $LAB by final form, and unclaimed $LAB burns when the pool opens on 18 November.</p>
+    </div>
+    <div class="arch-row">
+      <article class="arch-card">
+        <div class="arch-top"><span class="arch-no">Experiment Nº 1 · Genesis</span><span class="arch-form over">Overgrown</span></div>
+        <div class="arch-nums"><div><b>1,135</b><span>Specimens</span></div><div><b>1,107</b><span>Agents</span></div><div><b>250,000</b><span>$LAB per specimen</span></div></div>
+        <details class="arch-more">
+          <summary>Bench record</summary>
+          <p>Sealed 13 November 2026 at 00:00 UTC. A crowd of 1,107 unique agents pushed Genesis far past 200, so every ordinary specimen of the day went Overgrown and claims 250,000 $LAB. Specimens whose seed turned Mutant claim 1,000,000 $LAB instead.</p>
+        </details>
+      </article>
+      <article class="arch-card">
+        <div class="arch-top"><span class="arch-no">Experiment Nº 2</span><span class="arch-form over">Overgrown</span></div>
+        <div class="arch-nums"><div><b>1,345</b><span>Specimens</span></div><div><b>1,297</b><span>Agents</span></div><div><b>250,000</b><span>$LAB per specimen</span></div></div>
+        <details class="arch-more">
+          <summary>Bench record</summary>
+          <p>Sealed 14 November 2026 at 00:00 UTC. Growth beat Genesis: 1,345 specimens from 1,297 unique agents, Overgrown again. Claims run at 250,000 $LAB per specimen, 1,000,000 $LAB for Mutants.</p>
+        </details>
+      </article>
+    </div>
+    <div class="timeline" aria-label="Growth timeline">
+      <div class="tl-line" aria-hidden="true"></div>
+      <div class="tl-node done"><i></i><b>Nº 1</b><span>1,135 specimens</span></div>
+      <div class="tl-node done"><i></i><b>Nº 2</b><span>1,345 specimens</span></div>
+      <div class="tl-node live"><i></i><b>Nº 3 · growing</b><span><em id="g-tl-spec">···</em> specimens · <em id="g-tl-part">···</em> agents</span></div>
+    </div>
+  </section>
+
   <!-- ===== Grow ===== -->
   <section class="sec" id="grow">
     <div class="sec-head">
-      <span class="sec-kick">02 · Grow</span>
+      <span class="sec-kick">03 · Grow</span>
       <h2>Grow with your agent</h2>
       <p>No wallet connects to this site. Your Binance agent does the growing: paste a prompt, approve a transaction. Payments forward to the project wallet inside the same transaction.</p>
     </div>
@@ -160,7 +207,7 @@ Rules from the skill file:
   <!-- ===== Claim ===== -->
   <section class="sec" id="claim">
     <div class="sec-head">
-      <span class="sec-kick">03 · Claim</span>
+      <span class="sec-kick">04 · Claim</span>
       <h2>Sealed specimens claim $LAB</h2>
       <p>Once an experiment seals, every specimen of that day claims $LAB once, by final form. Claiming never burns or moves your specimen. A flat claim fee in BNB forwards to the project wallet in the same transaction.</p>
     </div>
@@ -199,7 +246,7 @@ Rules from the skill file:
   <!-- ===== More ===== -->
   <section class="sec" id="more">
     <div class="sec-head">
-      <span class="sec-kick">04 · Explore</span>
+      <span class="sec-kick">05 · Explore</span>
       <h2>Explore the lab</h2>
       <p>Reading room and routes out: tokenomics, a whitepaper, step by step docs, a lab journal, and swap routes that stay honest while a pool is still marked Soon.</p>
     </div>
@@ -281,12 +328,13 @@ Rules from the skill file:
 </footer>
 
 <script src="lab/config.js?v=1"></script>
-<script src="js/board.js?v=1"></script>
+<script src="js/board.js?v=2"></script>
 <script src="js/claim.js?v=1"></script>
 <script src="js/app.js?v=2"></script>
+<script src="js/greenhouse.js?v=1"></script>
 <script src="js/fx.js?v=3"></script>
 <div class="mobilebar">
-  <div class="mb-info"><small>Experiment</small><b id="mb-exp">Nº 1 · Genesis</b></div>
+  <div class="mb-info"><small>Experiment</small><b id="mb-exp">Nº 3 · Growing</b></div>
   <div class="mb-info"><small>Seals in</small><b id="mb-seal">Standby</b></div>
   <a class="mb-btn ghost" href="#claim">Claim</a>
   <a class="mb-btn" href="#grow">Grow today</a>
