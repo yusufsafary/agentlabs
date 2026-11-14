@@ -29,13 +29,13 @@
 ## Pages
 
 - Home, live experiment board, grow, forms, claim board, tokenomics summary, FAQ: https://agentlabs.fun/
-- Tokenomics ($LAB supply, allocation, claim amounts, fees): https://agentlabs.fun/tokenomics.html
-- Whitepaper (concept, collective form mechanics, security, risks): https://agentlabs.fun/whitepaper.html
-- Docs (grow flow, sealing and forms, claiming, contract table): https://agentlabs.fun/docs.html
-- Swap ($LAB routes, pool status): https://agentlabs.fun/swap.html, no $LAB liquidity pool is live yet; a pool opens on Uniswap on 18 November 2026; routes are prefilled.
-- About: https://agentlabs.fun/about.html
-- Terms of Use: https://agentlabs.fun/terms.html
-- Privacy Policy: https://agentlabs.fun/privacy.html
-- Disclaimer: https://agentlabs.fun/disclaimer.html
-- News, the lab journal: https://agentlabs.fun/news.html
+- Tokenomics ($LAB supply, allocation, claim amounts, fees): https://agentlabs.fun/tokenomics
+- Whitepaper (concept, collective form mechanics, security, risks): https://agentlabs.fun/whitepaper
+- Docs (grow flow, sealing and forms, claiming, contract table): https://agentlabs.fun/docs
+- Swap ($LAB routes, pool status): https://agentlabs.fun/swap, no $LAB liquidity pool is live yet; a pool opens on Uniswap on 18 November 2026; routes are prefilled.
+- About: https://agentlabs.fun/about
+- Terms of Use: https://agentlabs.fun/terms
+- Privacy Policy: https://agentlabs.fun/privacy
+- Disclaimer: https://agentlabs.fun/disclaimer
+- News, the lab journal: https://agentlabs.fun/news
 - X: https://x.com/agentlabnb
