@@ -32,7 +32,7 @@
 - Tokenomics ($LAB supply, allocation, claim amounts, fees): https://agentlabs.fun/tokenomics
 - Whitepaper (concept, collective form mechanics, security, risks): https://agentlabs.fun/whitepaper
 - Docs (grow flow, sealing and forms, claiming, contract table): https://agentlabs.fun/docs
-- Swap ($LAB routes, pool status): https://agentlabs.fun/swap, no $LAB liquidity pool is live yet; a pool opens on Uniswap on 18 November 2026; routes are prefilled.
+- Swap ($LAB routes, pool status): https://agentlabs.fun/swap, no $LAB liquidity pool is live yet; a pool opens on Uniswap on 2 December 2026; routes are prefilled.
 - About: https://agentlabs.fun/about
 - Terms of Use: https://agentlabs.fun/terms
 - Privacy Policy: https://agentlabs.fun/privacy
