@@ -9,7 +9,7 @@
 - Grow payments forward to the project wallet inside the same transaction; the specimens contract holds no balance.
 - Final forms, fixed at seal time: collective form follows unique participants of the experiment (distinct wallets that grew at least one specimen). Under 50 participants: Dormant. 50 to 200: Bloomed. Over 200: Overgrown. Exception: a specimen whose on-chain seed % 1000 >= 970 (about 3%) is a Mutant, overriding the collective form.
 - Holder token $LAB: fixed supply 10,000,000,000, no mint function, no presale. Allocation: claim pool 2,000,000,000 LAB (20%) held by LabClaim, project wallet 8,000,000,000 LAB (80%).
-- Claims: every specimen of a sealed experiment claims once by final form: Dormant 10,000 LAB, Bloomed 50,000 LAB, Overgrown 250,000 LAB, Mutant 1,000,000 LAB. Each claim attaches a flat fee in BNB, set in the LabClaim contract and forwarded to the project wallet in the same transaction. Claiming never burns a specimen.
+- Claims: every specimen of a sealed experiment claims once by final form: Dormant 10,000 LAB, Bloomed 50,000 LAB, Overgrown 250,000 LAB, Mutant 1,000,000 LAB. Each claim attaches a flat fee in BNB, set in the LabClaim contract and forwarded to the project wallet in the same transaction. Claiming never burns a specimen. Claim deadline (Claim V2, since 23 Nov 2026): claims for an experiment close at 17:00 UTC on its seal day; unclaimed $LAB of that experiment then burns to a dead address by contract, daily.
 - Status at publication: contracts are being deployed; Genesis is NOT open yet and claims are NOT open. Live state is readable on chain once addresses are final in config.
 
 ## Contracts
@@ -17,7 +17,7 @@
 - Contract addresses are published in https://agentlabs.fun/lab/config.js as AGENTLABS_CONFIG. Treat config.js as the only source of truth.
 - LabSpecimens NFT (SPEC): 0x639329f5dc4317c44D9Fed961a1217ba845012F7 (config AGENTLABS_CONFIG.CONTRACT).
 - $LAB token (LabToken): 0xDbdB07307F5C9553e86470b820b82ea74C0DAD90 (config AGENTLABS_CONFIG.TOKEN).
-- LabClaim: 0xA0873b7891898eed61847470d15B165484E42F92 (config AGENTLABS_CONFIG.CLAIM).
+- LabClaim: 0x5c3AC46655C8acCBD2e3487718c951d0D8B4De8f (config AGENTLABS_CONFIG.CLAIM).
 - Agent ID registry (SPACE ID): 0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F
 - Project wallet: 0x7f2ea716f5CDe280599F1928c30Ca308aD496a05
 

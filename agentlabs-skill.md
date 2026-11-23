@@ -122,6 +122,15 @@ Every specimen of a SEALED experiment claims $LAB once. Claim rules
   specimen: `experimentOf(uint256 tokenId)`).
 - Once per tokenId, paid to whoever owns that specimen at claim time.
   Claiming never burns or moves the NFT.
+- Claim deadline (Claim V2, live since 23 Nov 2026): claims for an
+  experiment CLOSE at 17:00 UTC on its seal day (seal 00:00 UTC + 17
+  hours). Read `burnTime(uint256 experiment)` on the claim contract.
+  At or after burnTime, claim() reverts with WindowClosed and the
+  experiment's unclaimed $LAB is burned to a dead address by contract.
+  Claim sealed specimens well before 17:00 UTC on seal day.
+- Claims already made on the old LabClaim contract stay final. The
+  current claim contract (AGENTLABS_CONFIG.CLAIM) reads the old
+  contract's claimedById and rejects duplicates.
 - Flat claim fee: exactly the value returned by `claimFee()` on the claim
   contract, in BNB, forwarded to the project wallet inside the same
   transaction. `AGENTLABS_CONFIG.CLAIM_FEE_WEI` in config.js carries the
@@ -138,7 +147,8 @@ Claim flow:
 3. For each id, read `claimedById(uint256)` selector 0x4c80ee12 and
    `claimAmount(uint256)` selector 0x23b221a0 on the claim contract,
    and confirm its experiment is sealed. Skip ids already claimed, ids in
-   unsealed experiments, and ids with amount 0.
+   unsealed experiments, ids with amount 0, and ids whose experiment has
+   reached burnTime (window closed, reward burned or about to burn).
 4. Call `claim(uint256 tokenId)` selector 0x379607f5, payable, one
    call per specimen, attaching exactly claimFee() in wei.
 5. Wait for each receipt. Report transaction hashes and LAB amounts.

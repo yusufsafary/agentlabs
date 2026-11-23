@@ -665,3 +665,9 @@ details p{animation:faqIn .45s cubic-bezier(.22,1,.36,1)}
   .band-labels { display: flex; flex-direction: column; gap: 3px; font-size: 10.5px; }
   .band-labels .bl { text-align: left; padding-right: 0; }
 }
+
+.burn-panel{margin-top:6px;padding:22px;border:1px solid rgba(255,64,26,.5);border-radius:24px;background:rgba(255,64,26,.07)}
+.burn-panel p{margin:0 0 12px;line-height:1.55}
+.burn-panel p:last-child{margin-bottom:0}
+.burn-panel .fine{color:var(--faint);font-size:13px}
+.burn-panel .fine span{word-break:break-all}
